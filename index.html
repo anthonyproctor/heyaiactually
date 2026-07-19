@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Actually, by Anthony Proctor</title>
+<meta name="description" content="Plain, honest help for regular people and teams who want to actually use AI. No hype, no jargon. Workshops and a free cheat sheet." />
+<meta property="og:title" content="AI Actually, by Anthony Proctor" />
+<meta property="og:description" content="Plain, honest help for regular people and teams who want to actually use AI. No hype." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>" />
+</head>
+<body>
+<style>
+  /* ============ AI ACTUALLY — by Anthony Proctor ============
+     Design language: "plain talk, real screen."
+     Warm ink ground + a single petrol-teal note. A cool accent on a
+     warm ground reads calm and competent, not hyped. Serif that reads
+     human over the name, humanist sans for reading, monospace as the
+     signature voice, because the brand is "I show you my screen."
+     The "real screen" cards stay dark in both themes on purpose:
+     a terminal is a terminal. ================================= */
+
+  :root {
+    --paper:   #FBFAF5;
+    --ink:     #1B1811;
+    --muted:   #6B6250;
+    --surface: #F2EFE6;
+    --line:    #E4DECF;
+    --accent:  #0F6E78;   /* petrol teal, legible on paper */
+    --accent-soft: #DCEEEF;
+    --on-accent: #FBFAF5;
+
+    /* screen cards: constant across themes */
+    --screen-bg:     #1A1811;
+    --screen-panel:  #211E15;
+    --screen-ink:    #ECE6D7;
+    --screen-muted:  #9E947E;
+    --screen-accent: #43B9C3;
+    --screen-line:   #322D20;
+
+    --measure: 40rem;
+    --serif: Charter, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", "Menlo", "Cascadia Mono", "Consolas", monospace;
+
+    --step--1: clamp(0.82rem, 0.8rem + 0.1vw, 0.9rem);
+    --step-0:  clamp(1.03rem, 1rem + 0.2vw, 1.15rem);
+    --step-1:  clamp(1.3rem, 1.2rem + 0.5vw, 1.6rem);
+    --step-2:  clamp(1.7rem, 1.4rem + 1.4vw, 2.5rem);
+    --step-3:  clamp(2.5rem, 1.9rem + 3vw, 4.4rem);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:   #15140E;
+      --ink:     #ECE6D7;
+      --muted:   #A69C85;
+      --surface: #1D1A12;
+      --line:    #302B1E;
+      --accent:  #43B9C3;
+      --accent-soft: #0F2325;
+      --on-accent: #15140E;
+    }
+  }
+  :root[data-theme="light"] {
+    --paper:#FBFAF5; --ink:#1B1811; --muted:#6B6250; --surface:#F2EFE6;
+    --line:#E4DECF; --accent:#0F6E78; --accent-soft:#DCEEEF; --on-accent:#FBFAF5;
+  }
+  :root[data-theme="dark"] {
+    --paper:#15140E; --ink:#ECE6D7; --muted:#A69C85; --surface:#1D1A12;
+    --line:#302B1E; --accent:#43B9C3; --accent-soft:#0F2325; --on-accent:#15140E;
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+
+  .page {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: var(--step-0);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  .wrap {
+    width: 100%;
+    max-width: 68rem;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 5vw, 3rem);
+  }
+  .col { max-width: var(--measure); }
+
+  a { color: inherit; }
+  ::selection { background: var(--accent); color: var(--on-accent); }
+
+  /* ---- eyebrows / labels ---- */
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: var(--step--1);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .eyebrow .dot { color: var(--accent); }
+
+  /* ---- type ---- */
+  h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.05; text-wrap: balance; margin: 0; }
+  h1 { font-size: var(--step-3); letter-spacing: -0.015em; }
+  h2 { font-size: var(--step-2); letter-spacing: -0.01em; }
+  h3 { font-size: var(--step-1); line-height: 1.15; }
+  p { margin: 0; }
+  .lead { font-size: var(--step-1); line-height: 1.4; color: var(--ink); font-family: var(--sans); font-weight: 400; }
+
+  /* the correction motif: hype struck, the truth in accent */
+  .hype { color: var(--muted); text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: color-mix(in srgb, var(--muted) 60%, transparent); }
+  .real { color: var(--accent); font-style: normal; }
+
+  /* ---- header ---- */
+  header.site {
+    position: sticky; top: 0; z-index: 20;
+    background: color-mix(in srgb, var(--paper) 86%, transparent);
+    backdrop-filter: saturate(1.1) blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.85rem 0; }
+  .brand { font-family: var(--mono); font-size: var(--step--1); letter-spacing: 0.02em; display: inline-flex; align-items: baseline; gap: 0.5ch; text-decoration: none; }
+  .brand b { font-weight: 600; }
+  .brand .by { color: var(--muted); }
+  .brand .wave { font-family: var(--sans); }
+  .nav-cta {
+    font-family: var(--mono); font-size: var(--step--1);
+    text-decoration: none; padding: 0.5rem 0.9rem; border-radius: 2px;
+    border: 1px solid var(--accent); color: var(--accent);
+    transition: background .18s ease, color .18s ease;
+  }
+  .nav-cta:hover { background: var(--accent); color: var(--on-accent); }
+
+  /* ---- sections ---- */
+  section { padding: clamp(3.5rem, 8vw, 6.5rem) 0; border-top: 1px solid var(--line); }
+  section:first-of-type { border-top: 0; }
+  .stack > * + * { margin-top: 1.25rem; }
+
+  /* ---- hero ---- */
+  .hero { padding-top: clamp(3rem, 7vw, 5.5rem); }
+  .hero-grid { display: grid; grid-template-columns: 1fr; gap: clamp(2rem, 5vw, 3.5rem); align-items: center; }
+  @media (min-width: 60rem) { .hero-grid { grid-template-columns: 1.05fr 0.95fr; } }
+  .hero h1 { margin-top: 1rem; }
+  .hero .lead { margin-top: 1.4rem; max-width: 34rem; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+
+  .btn {
+    font-family: var(--mono); font-size: var(--step--1);
+    text-decoration: none; display: inline-flex; align-items: center; gap: 0.6ch;
+    padding: 0.85rem 1.2rem; border-radius: 2px; border: 1px solid transparent;
+    transition: transform .12s ease, background .18s ease, border-color .18s ease;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary { background: var(--accent); color: var(--on-accent); }
+  .btn-primary:hover { background: color-mix(in srgb, var(--accent) 88%, black); }
+  .btn-ghost { border-color: var(--line); color: var(--ink); }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+  a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px;
+  }
+
+  /* ---- the "real screen" card ---- */
+  .screen {
+    background: var(--screen-bg); color: var(--screen-ink);
+    border: 1px solid var(--screen-line); border-radius: 8px;
+    font-family: var(--mono); font-size: 0.9rem; line-height: 1.7;
+    overflow: hidden; box-shadow: 0 24px 60px -30px rgba(0,0,0,.55);
+  }
+  .screen .chrome { display: flex; align-items: center; gap: 0.5ch; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--screen-line); color: var(--screen-muted); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  .screen .dots { display: inline-flex; gap: 0.4ch; margin-right: 0.5ch; }
+  .screen .dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--screen-line); }
+  .screen .body { padding: 1.1rem 1.1rem 1.3rem; }
+  .screen .ln { display: block; white-space: pre-wrap; }
+  .screen .who { color: var(--screen-accent); }
+  .screen .who.ai { color: var(--screen-muted); }
+  .screen .dim { color: var(--screen-muted); }
+  .cursor { display: inline-block; width: 0.6ch; height: 1.05em; background: var(--screen-accent); transform: translateY(0.15em); animation: blink 1.05s steps(2, jump-none) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* ---- "for you if" list ---- */
+  .foryou ul { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 0.9rem; max-width: 44rem; }
+  .foryou li { display: grid; grid-template-columns: auto 1fr; gap: 0.9rem; align-items: start; }
+  .foryou li::before { content: "›"; font-family: var(--mono); color: var(--accent); font-weight: 700; line-height: 1.5; }
+
+  /* ---- corrections ---- */
+  .corrections { display: grid; gap: 0; margin-top: 2rem; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .correction { display: grid; grid-template-columns: 1fr; gap: 0.35rem; padding: 1.15rem 1.25rem; border-top: 1px solid var(--line); }
+  .correction:first-child { border-top: 0; }
+  @media (min-width: 44rem) { .correction { grid-template-columns: 1fr 1fr; align-items: baseline; gap: 1.5rem; } }
+  .correction .not { font-family: var(--sans); color: var(--muted); }
+  .correction .not s { text-decoration-thickness: 2px; text-decoration-color: color-mix(in srgb, var(--muted) 55%, transparent); }
+  .correction .yes { font-family: var(--serif); font-size: var(--step-1); line-height: 1.2; }
+  .correction .yes b { color: var(--accent); font-weight: 600; }
+
+  /* ---- offer card ---- */
+  .offer { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: clamp(1.5rem, 4vw, 2.5rem); margin-top: 2rem; }
+  .offer .kicker { font-family: var(--mono); font-size: var(--step--1); letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+  .offer h3 { margin-top: 0.5rem; }
+  .offer ul { list-style: none; padding: 0; margin: 1.4rem 0 0; display: grid; gap: 0.7rem; }
+  .offer li { display: grid; grid-template-columns: auto 1fr; gap: 0.8rem; }
+  .offer li::before { content: "✓"; color: var(--accent); font-weight: 700; }
+  .offer .foot { margin-top: 1.6rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+  .price { font-family: var(--mono); font-size: var(--step--1); color: var(--muted); }
+  .price b { color: var(--ink); }
+
+  /* ---- cheat sheet capture (the centerpiece) ---- */
+  .capture { background: var(--accent-soft); border-top-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
+  .capture .card { max-width: 46rem; }
+  .capture h2 .real { text-decoration: none; }
+  .form { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.6rem; max-width: 34rem; }
+  .form input[type="email"] {
+    flex: 1 1 16rem; min-width: 0;
+    font-family: var(--mono); font-size: var(--step-0);
+    padding: 0.85rem 1rem; border-radius: 2px;
+    border: 1px solid color-mix(in srgb, var(--ink) 22%, transparent);
+    background: var(--paper); color: var(--ink);
+  }
+  .form input::placeholder { color: var(--muted); }
+  .form .btn-primary { flex: 0 0 auto; cursor: pointer; border: 0; }
+  .form-note { font-family: var(--mono); font-size: var(--step--1); color: var(--muted); margin-top: 0.9rem; }
+  .form-done { display: none; font-family: var(--mono); font-size: var(--step-0); color: var(--accent); margin-top: 1.4rem; }
+  .capture.sent .form { display: none; }
+  .capture.sent .form-done { display: block; }
+
+  /* ---- about ---- */
+  .about .col { max-width: 42rem; }
+  .about .sign { font-family: var(--mono); font-size: var(--step--1); color: var(--muted); margin-top: 1.5rem; }
+
+  /* ---- footer ---- */
+  footer { border-top: 1px solid var(--line); padding: 2.5rem 0 3.5rem; }
+  .foot-grid { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: baseline; justify-content: space-between; }
+  .foot-brand { font-family: var(--mono); font-size: var(--step--1); }
+  .foot-brand .url { color: var(--accent); }
+  .foot-links { display: flex; gap: 1.5rem; font-family: var(--mono); font-size: var(--step--1); }
+  .foot-links a { color: var(--muted); text-decoration: none; }
+  .foot-links a:hover { color: var(--accent); }
+  .fineprint { color: var(--muted); font-size: var(--step--1); margin-top: 1.5rem; font-family: var(--mono); }
+
+  /* load motion, kept restrained */
+  .rise { opacity: 0; transform: translateY(14px); animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+  .rise.d1 { animation-delay: .06s; } .rise.d2 { animation-delay: .12s; } .rise.d3 { animation-delay: .18s; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rise { animation: none; opacity: 1; transform: none; }
+    .cursor { animation: none; }
+    .btn:active { transform: none; }
+  }
+</style>
+
+<div class="page">
+  <header class="site">
+    <div class="wrap bar">
+      <a class="brand" href="#top"><span class="wave">👋</span> <b>AI Actually</b> <span class="by">by Anthony Proctor</span></a>
+      <a class="nav-cta" href="#cheatsheet">Free cheat sheet</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow rise">hey<span class="dot">,</span> ai actually</p>
+          <h1 class="rise d1">Everyone talks about AI. I show you how to actually use it.</h1>
+          <p class="lead rise d2">Plain, honest help for regular people and teams who feel behind. No hype, no jargon, no guru nonsense. Just me, my real screen, and the handful of moves that change how you work this week.</p>
+          <div class="cta-row rise d2">
+            <a class="btn btn-primary" href="#cheatsheet">Get the free cheat sheet <span aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="#workshop">Book a workshop</a>
+          </div>
+        </div>
+
+        <div class="screen rise d3" role="img" aria-label="A real screen showing a plain prompt and its result.">
+          <div class="chrome"><span class="dots"><i></i><i></i><i></i></span> heyaiactually.com — the real screen</div>
+          <div class="body">
+            <span class="ln"><span class="who">you ›</span> turn these messy meeting notes into clear action items</span>
+            <span class="ln"><span class="who ai">ai  ›</span> Done. Six owners, six due dates, nothing dropped.</span>
+            <span class="ln dim"> </span>
+            <span class="ln"><span class="who">you ›</span> now write the follow up email in my voice, short</span>
+            <span class="ln"><span class="who ai">ai  ›</span> Drafted. Read it before you send it.<span class="cursor" aria-hidden="true"></span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOR YOU IF -->
+    <section class="foryou">
+      <div class="wrap">
+        <div class="col">
+          <p class="eyebrow">this is for you if</p>
+          <h2 style="margin-top:0.8rem;">You keep hearing AI will change everything, and you just want your Tuesday back.</h2>
+        </div>
+        <ul>
+          <li>You feel like everyone is using AI but you, and nobody slowed down to show you how.</li>
+          <li>You have opened a chatbot, typed something, and quietly thought, is this it.</li>
+          <li>You do not want a lecture on neural networks. You want the boring work off your plate.</li>
+          <li>You run a small team and you know AI could help, but you are worried someone will paste the wrong thing into it.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CORRECTIONS (the brand motif) -->
+    <section>
+      <div class="wrap">
+        <div class="col">
+          <p class="eyebrow">what this actually is</p>
+          <h2 style="margin-top:0.8rem;">The name is a promise. I cut the hype and hand you the real thing.</h2>
+        </div>
+        <div class="corrections">
+          <div class="correction">
+            <p class="not"><s>A hype reel about the future.</s></p>
+            <p class="yes">A working session. You leave <b>using it</b>, not dreaming about it.</p>
+          </div>
+          <div class="correction">
+            <p class="not"><s>Prompt magic tricks you forget by Friday.</s></p>
+            <p class="yes">A few <b>real habits</b> that stick to the work you already do.</p>
+          </div>
+          <div class="correction">
+            <p class="not"><s>Your data uploaded who knows where.</s></p>
+            <p class="yes">Plain <b>guardrails</b> so nothing sensitive ever leaks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKSHOP OFFER -->
+    <section id="workshop">
+      <div class="wrap">
+        <div class="col">
+          <p class="eyebrow">for your team</p>
+          <h2 style="margin-top:0.8rem;">AI for Your Actual Workday</h2>
+          <p class="lead" style="margin-top:1rem;">A ninety minute session for your people. They walk in unsure and walk out actually using it, on the real work they do every day.</p>
+        </div>
+        <div class="offer">
+          <p class="kicker">the workshop</p>
+          <h3>What your team leaves with</h3>
+          <ul>
+            <li>Three AI habits they will use Monday morning, built on their real tasks, not toy demos.</li>
+            <li>A one page safe use guide, so nobody pastes the wrong thing into the wrong tool.</li>
+            <li>Live over the shoulder builds. I share my screen and we do it together, in the room.</li>
+            <li>The honest map of what AI is good at, what it is bad at, and where it will waste your time.</li>
+          </ul>
+          <div class="foot">
+            <a class="btn btn-primary" href="#cheatsheet">Book a workshop <span aria-hidden="true">→</span></a>
+            <span class="price">On site or remote <b>·</b> teams of any size <b>·</b> plain pricing, no surprises</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHEAT SHEET CAPTURE -->
+    <section id="cheatsheet" class="capture">
+      <div class="wrap">
+        <div class="card">
+          <p class="eyebrow">free, one page, no fluff</p>
+          <h2 style="margin-top:0.8rem;">The Safe AI Starter</h2>
+          <p class="lead" style="margin-top:1rem;">Five ways to actually use AI at work this week, and the one thing you should never paste into it. Made for regular people, not engineers.</p>
+          <form class="form" id="capture-form" novalidate>
+            <label for="email" style="position:absolute;left:-9999px;">Your email</label>
+            <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="you@work.com" required />
+            <button class="btn btn-primary" type="submit">Send it to me <span aria-hidden="true">→</span></button>
+          </form>
+          <p class="form-note">No spam, no funnels. Unsubscribe in one click.</p>
+          <p class="form-done" role="status">Nice. On the live site this lands in your inbox in a minute. For now, this is the preview.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+      <div class="wrap">
+        <div class="col">
+          <p class="eyebrow">who is this guy</p>
+          <h2 style="margin-top:0.8rem;">I am Anthony. I am not an influencer, and I do not sell magic.</h2>
+          <div class="stack" style="margin-top:1.3rem;">
+            <p>I am a builder who runs my own work on AI every single day. I would rather show you my actual screen than sell you a dream, because the dream is not the point. The point is you getting an hour of your day back.</p>
+            <p>If what I show you does not actually help by Monday, I wasted your time. And I really do not like wasting people's time.</p>
+          </div>
+          <p class="sign">// built in Denver. taught plainly.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">👋 <b>AI Actually</b>, by Anthony Proctor · <span class="url">heyaiactually.com</span></div>
+        <div class="foot-links">
+          <a href="#cheatsheet">Cheat sheet</a>
+          <a href="#workshop">Workshops</a>
+          <a href="https://www.linkedin.com/in/anthonyproctor/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <p class="fineprint">Preview mockup. Real screen, real help, no hype.</p>
+    </div>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var form = document.getElementById('capture-form');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = document.getElementById('email');
+      if (!email.value || email.value.indexOf('@') === -1) { email.focus(); return; }
+      document.getElementById('cheatsheet').classList.add('sent');
+    });
+  })();
+</script>
+
+</body>
+</html>
