@@ -1,3 +1,32 @@
+# robots.txt for heyaiactually.com
+
 User-agent: *
 Allow: /
+
+# Explicit allows for AI crawlers. ChatGPT search resolves largely through
+# Bing's index; OAI-SearchBot is the one lever OpenAI documents.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://heyaiactually.com/sitemap.xml

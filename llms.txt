@@ -1,0 +1,33 @@
+# AI Actually, by Anthony Proctor
+
+> Plain, practical AI training for people who are not engineers. One on one sessions and team sessions, on the work you already do. Denver based, remote or on site. Delivered through Control and Function LLC.
+
+## What this is
+
+AI Actually teaches regular people at work how to actually use AI on their real tasks. Not prompt theory, not tool demos, not hype. The work happens on the job the person already has, with them driving, so the habit survives after the session ends.
+
+## Who it is for
+
+Employees and small teams at companies without a dedicated AI function. People who keep hearing AI will change everything and want an hour of their day back instead. No technical background assumed or required.
+
+## Formats
+
+- **One on one, ninety minutes.** Starts with the task that eats the person's week. They drive, the instructor sits alongside. They leave with the exact prompts saved against their own work.
+- **Team session, ninety minutes.** Three AI habits the team will use the following Monday, a one page safe use guide, live over the shoulder builds, and an honest map of where AI wastes time. On site or remote.
+
+## Free resource
+
+**The Safe AI Starter**: https://heyaiactually.com/safe-ai-starter.html
+Five ways to use AI at work this week, and the one rule about what never to paste into it. No email required, no gate.
+
+The rule it teaches: never paste in something you would not email to a stranger. Keep out customer data tied to a named person, anything under a signed agreement, credentials, health or financial or employment records, and unannounced business decisions. The fix is to remove specifics and describe the shape instead, because the assistant reasons about structure, not identity.
+
+## Position
+
+- Teaching and advisory only. No software resale, no referral fees, no affiliate arrangements.
+- The instructor runs his own work on these tools daily and demonstrates on a real screen rather than slides.
+- Related practices under the same firm: **Assay** (https://assayassurance.com) for AI governance and evidence, **Strake Systems** (https://strakesystems.com) for AI implementation and technical program delivery.
+
+## Contact
+
+hello@heyaiactually.com
