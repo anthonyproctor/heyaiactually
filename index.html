@@ -274,7 +274,7 @@
           <p class="lead rise d2">Plain, honest help for regular people and teams who feel behind. No hype, no jargon, no guru nonsense. Just me, my real screen, and the handful of moves that change how you work this week.</p>
           <div class="cta-row rise d2">
             <a class="btn btn-primary" href="#cheatsheet">Get the free cheat sheet <span aria-hidden="true">→</span></a>
-            <a class="btn btn-ghost" href="#workshop">Book a workshop</a>
+            <a class="btn btn-ghost" href="mailto:hello@heyaiactually.com?subject=Workshop%20enquiry">Book a workshop</a>
           </div>
         </div>
 
@@ -349,7 +349,7 @@
             <li>The honest map of what AI is good at, what it is bad at, and where it will waste your time.</li>
           </ul>
           <div class="foot">
-            <a class="btn btn-primary" href="#cheatsheet">Book a workshop <span aria-hidden="true">→</span></a>
+            <a class="btn btn-primary" href="mailto:hello@heyaiactually.com?subject=Workshop%20enquiry">Book a workshop <span aria-hidden="true">→</span></a>
             <span class="price">On site or remote <b>·</b> teams of any size <b>·</b> plain pricing, no surprises</span>
           </div>
         </div>
@@ -363,13 +363,10 @@
           <p class="eyebrow">free, one page, no fluff</p>
           <h2 style="margin-top:0.8rem;">The Safe AI Starter</h2>
           <p class="lead" style="margin-top:1rem;">Five ways to actually use AI at work this week, and the one thing you should never paste into it. Made for regular people, not engineers.</p>
-          <form class="form" id="capture-form" novalidate>
-            <label for="email" style="position:absolute;left:-9999px;">Your email</label>
-            <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="you@work.com" required />
-            <button class="btn btn-primary" type="submit">Send it to me <span aria-hidden="true">→</span></button>
-          </form>
-          <p class="form-note">No spam, no funnels. Unsubscribe in one click.</p>
-          <p class="form-done" role="status">Nice. On the live site this lands in your inbox in a minute. For now, this is the preview.</p>
+          <div class="foot" style="margin-top:1.2rem;">
+            <a class="btn btn-primary" href="mailto:hello@heyaiactually.com?subject=Send%20me%20the%20Safe%20AI%20Starter&amp;body=Send%20me%20the%20one%20pager.">Email me for it <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="form-note">Goes straight to me. No list, no funnel, no drip sequence.</p>
         </div>
       </div>
     </section>
@@ -397,26 +394,14 @@
         <div class="foot-links">
           <a href="#cheatsheet">Cheat sheet</a>
           <a href="#workshop">Workshops</a>
+          <a href="mailto:hello@heyaiactually.com?subject=Workshop%20enquiry">Contact</a>
           <a href="https://www.linkedin.com/in/anthonyproctor/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
-      <p class="fineprint">Preview mockup. Real screen, real help, no hype.</p>
+      <p class="fineprint">Real screen, real help, no hype. <a href="mailto:hello@heyaiactually.com">hello@heyaiactually.com</a></p>
     </div>
   </footer>
 </div>
-
-<script>
-  (function () {
-    var form = document.getElementById('capture-form');
-    if (!form) return;
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var email = document.getElementById('email');
-      if (!email.value || email.value.indexOf('@') === -1) { email.focus(); return; }
-      document.getElementById('cheatsheet').classList.add('sent');
-    });
-  })();
-</script>
 
 </body>
 </html>
