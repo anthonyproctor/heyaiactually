@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://heyaiactually.com/sitemap.xml
