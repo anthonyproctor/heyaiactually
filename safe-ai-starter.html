@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Safe AI Starter | AI Actually</title>
+<meta name="description" content="Five ways to actually use AI at work this week, and the one thing you should never paste into it. Written for regular people, not engineers." />
+<link rel="canonical" href="https://heyaiactually.com/safe-ai-starter.html" />
+<meta property="og:title" content="The Safe AI Starter" />
+<meta property="og:description" content="Five ways to actually use AI at work this week, and the one thing you should never paste into it." />
+<meta property="og:url" content="https://heyaiactually.com/safe-ai-starter.html" />
+<meta property="og:type" content="article" />
+<script data-goatcounter="https://heyaiactually.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<style>
+  :root{
+    --paper:#FBFAF5; --ink:#1B1811; --muted:#6B6250; --surface:#F2EFE6;
+    --line:#E4DECF; --accent:#0F6E78; --accent-soft:#DCEEEF; --on-accent:#FBFAF5;
+    --warn-bg:#FBEDE6; --warn-line:#E4B69C; --warn-ink:#8A3A12;
+    --measure:40rem;
+    --serif:Charter,"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono","Menlo","Cascadia Mono","Consolas",monospace;
+    --step--1:clamp(0.82rem,0.8rem + 0.1vw,0.9rem);
+    --step-0:clamp(1.03rem,1rem + 0.2vw,1.15rem);
+    --step-1:clamp(1.3rem,1.2rem + 0.5vw,1.6rem);
+    --step-2:clamp(1.7rem,1.4rem + 1.4vw,2.5rem);
+    --step-3:clamp(2.2rem,1.7rem + 2.4vw,3.4rem);
+  }
+  :root:not([data-theme="light"]){}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#141310; --ink:#ECE6D7; --muted:#9E947E; --surface:#1D1B15;
+      --line:#302B20; --accent:#43B9C3; --accent-soft:#123034; --on-accent:#0E1113;
+      --warn-bg:#2A1810; --warn-line:#6B3A1E; --warn-ink:#E8A277;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#141310; --ink:#ECE6D7; --muted:#9E947E; --surface:#1D1B15;
+    --line:#302B20; --accent:#43B9C3; --accent-soft:#123034; --on-accent:#0E1113;
+    --warn-bg:#2A1810; --warn-line:#6B3A1E; --warn-ink:#E8A277;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+       font-size:var(--step-0);line-height:1.62;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--measure);margin:0 auto;padding:0 1.4rem;}
+  header.top{border-bottom:1px solid var(--line);padding:1.1rem 0;}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+  a{color:var(--accent);}
+  .brand{font-weight:700;text-decoration:none;color:var(--ink);}
+  .brand span{color:var(--muted);font-weight:400;font-size:var(--step--1);}
+  .back{font-size:var(--step--1);text-decoration:none;}
+  main{padding:3.2rem 0 4rem;}
+  .eyebrow{font-family:var(--mono);font-size:var(--step--1);letter-spacing:.1em;
+           text-transform:uppercase;color:var(--accent);margin:0;}
+  h1{font-family:var(--serif);font-size:var(--step-3);line-height:1.08;margin:.7rem 0 0;letter-spacing:-.015em;}
+  .lead{font-size:var(--step-1);color:var(--muted);margin:1.1rem 0 0;line-height:1.5;}
+  h2{font-family:var(--serif);font-size:var(--step-2);line-height:1.16;margin:3rem 0 0;letter-spacing:-.01em;}
+  h3{font-family:var(--serif);font-size:var(--step-1);margin:0 0 .1rem;}
+  p{margin:.9rem 0 0;}
+  hr{border:0;border-top:1px solid var(--line);margin:2.6rem 0 0;}
+  .num{font-family:var(--mono);font-size:var(--step--1);color:var(--accent);
+       letter-spacing:.08em;text-transform:uppercase;margin:2.6rem 0 .35rem;}
+  .try{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);
+       border-radius:6px;padding:1rem 1.1rem;margin:1rem 0 0;}
+  .try .label{font-family:var(--mono);font-size:var(--step--1);text-transform:uppercase;
+              letter-spacing:.08em;color:var(--muted);margin:0 0 .4rem;}
+  .try p{margin:0;font-family:var(--mono);font-size:var(--step--1);line-height:1.6;}
+  .warn{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+        padding:1.3rem 1.4rem;margin:1.4rem 0 0;}
+  .warn .eyebrow{color:var(--warn-ink);}
+  .warn h2{margin-top:.5rem;}
+  ul{margin:.9rem 0 0;padding-left:1.15rem;}
+  li{margin:.45rem 0;}
+  .cta{background:var(--surface);border:1px solid var(--line);border-radius:10px;
+       padding:1.7rem;margin:3.4rem 0 0;}
+  .cta h2{margin-top:0;}
+  .btn{display:inline-block;background:var(--accent);color:var(--on-accent);text-decoration:none;
+       font-weight:600;padding:.72rem 1.15rem;border-radius:7px;margin-top:1.1rem;}
+  footer{border-top:1px solid var(--line);margin-top:3.4rem;padding:1.6rem 0 2.6rem;
+         color:var(--muted);font-size:var(--step--1);}
+  @media print{
+    body{background:#fff;color:#000;font-size:10.5pt;}
+    header.top,.cta,footer,.back{display:none;}
+    main{padding:0;}
+    .wrap{max-width:none;padding:0;}
+    h1{font-size:22pt;} h2{font-size:14pt;margin-top:16pt;} h3{font-size:12pt;}
+    .try,.warn{border:1px solid #999;background:#f5f5f5;}
+    .num{margin-top:14pt;}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/">👋 <b>AI Actually</b> <span>by Anthony Proctor</span></a>
+    <a class="back" href="/">Back to the site</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="eyebrow">free, no signup, no catch</p>
+    <h1>The Safe AI Starter</h1>
+    <p class="lead">Five ways to actually use AI at work this week, and the one thing you should never paste into it. Written for regular people, not engineers.</p>
+
+    <p>Every one of these takes under five minutes and works in whatever assistant your company already pays for. You do not need a new tool, a subscription, or permission from IT to try any of them. Read the last section before you start.</p>
+
+    <hr />
+
+    <p class="num">01</p>
+    <h3>Make it read the long thing for you</h3>
+    <p>The forty page policy, the contract, the thread with thirty replies. You are not trying to avoid reading it. You are trying to find out whether you have to.</p>
+    <p>The mistake people make is asking for a summary. A summary gives you a shorter version of something you still have to evaluate. Ask instead for what changed, what you have to do, and by when. Those are answers, not a smaller pile.</p>
+    <div class="try">
+      <p class="label">try this</p>
+      <p>Read this and tell me three things: what is being asked of me, what the deadline is, and anything in here that is unusual compared to a standard version of this document. Quote the exact lines you are basing each answer on.</p>
+    </div>
+    <p>The quoting instruction matters more than the rest. It forces the answer to point at real text, so you can check it in ten seconds instead of trusting it.</p>
+
+    <p class="num">02</p>
+    <h3>Write the first draft you have been avoiding</h3>
+    <p>The reason a blank page is hard is not that writing is hard. It is that starting is hard. AI is genuinely excellent at being wrong first so you can be right second.</p>
+    <p>Do not ask for the final version. Ask for a bad first draft on purpose. You will edit it in four minutes and it will sound like you, because you rewrote it. Ask for a polished final and you will spend twenty minutes sanding off a voice that is not yours.</p>
+    <div class="try">
+      <p class="label">try this</p>
+      <p>Write a rough first draft of an email to my manager asking to move Thursday's meeting. Keep it under six sentences, plain and direct, no corporate padding. I will rewrite it, so do not try to make it perfect.</p>
+    </div>
+
+    <p class="num">03</p>
+    <h3>Turn your mess into a structure</h3>
+    <p>This is the one most people never try, and it is the one that saves the most time. You have notes from a call, a list of complaints, a page of bullet points that made sense at the time. Give it the mess and ask for shape.</p>
+    <p>It is very good at this and it is a boring task, which is exactly the combination you want. Nobody is going to admire the work, and you were never going to enjoy doing it.</p>
+    <div class="try">
+      <p class="label">try this</p>
+      <p>Here are my raw notes from a meeting. Turn them into three sections: decisions we made, open questions, and who owes what by when. If something is unclear about who owns an item, list it as unclear rather than guessing.</p>
+    </div>
+    <p>That last sentence is doing real work. Without it, the assistant will invent an owner to fill the gap, and it will sound completely confident about it.</p>
+
+    <p class="num">04</p>
+    <h3>Have it argue with you</h3>
+    <p>Most people use AI to agree with them, which is a waste of the only thing it does that a colleague will not do for free at four in the afternoon.</p>
+    <p>Before you send the proposal, before the meeting where you have to defend a number, make it take the other side. It will be blunt in a way people who work with you usually are not, and it costs nothing to hear.</p>
+    <div class="try">
+      <p class="label">try this</p>
+      <p>Here is my proposal. Take the position of the person most likely to say no, and give me the three strongest objections they would raise. Do not soften them and do not tell me the idea is good.</p>
+    </div>
+
+    <p class="num">05</p>
+    <h3>Ask it to explain the thing you are embarrassed not to know</h3>
+    <p>Everybody has a few of these. A term that goes around your workplace that you never asked about, a system everyone assumes you understand, an acronym from a department you have never worked in.</p>
+    <p>This is the single most undersold use of the whole technology. It does not remember that you asked, it does not tell anyone, and it will keep explaining after the third time you say you still do not get it.</p>
+    <div class="try">
+      <p class="label">try this</p>
+      <p>Explain what this term means in plain English, as if I have never worked in this field. Then give me one example from an ordinary workplace. If I still seem confused, try a completely different explanation rather than repeating the same one.</p>
+    </div>
+
+    <div class="warn">
+      <p class="eyebrow">the one rule</p>
+      <h2 style="margin-top:.4rem;">Never paste in something you would not email to a stranger.</h2>
+      <p>That is the whole rule, and it holds up better than any policy document. If you would hesitate to forward it outside the company, do not paste it into an assistant.</p>
+      <p>Concretely, keep all of the following out:</p>
+      <ul>
+        <li>Anything with a customer's name attached to their personal details.</li>
+        <li>Anything covered by a signed agreement that says where it can live.</li>
+        <li>Passwords, keys, tokens, or anything that unlocks something.</li>
+        <li>Health, financial, or employment records about a specific person.</li>
+        <li>Anything about a deal, a layoff, or a decision that has not been announced.</li>
+      </ul>
+      <p>The reason is simpler than the scary version you have heard. In most consumer tools the conversation is retained, and depending on the settings it may be reviewed by a human or used to improve the product. Even where it is not, you have moved company information onto a system your company never reviewed. That is the actual problem, and it stays a problem whether or not anything bad ever happens.</p>
+      <p>The fix takes ten seconds. Take the specifics out and describe the shape instead. Say a customer in the healthcare space rather than the customer's name. Say a mid five figure contract rather than the number. The answer you get back is just as useful, because the assistant was never reasoning about the identity, only the structure.</p>
+      <p>And if your workplace has an approved tool with a business agreement behind it, use that one. It is the same technology with the retention terms already negotiated.</p>
+    </div>
+
+    <h2>One last thing</h2>
+    <p>You will get a confident, well written, completely wrong answer at some point. Not maybe. It is going to happen, and it will not look any different from a right one.</p>
+    <p>So the habit worth building from day one is this. If you would have checked a colleague's work before putting your name on it, check this too. If you would not have bothered, you probably do not need to here either. That single instinct is most of what separates people who get real value out of these tools from people who eventually get burned by them.</p>
+
+    <div class="cta">
+      <p class="eyebrow">if this was useful</p>
+      <h2>Want to do this on your actual work?</h2>
+      <p>This page is the free version and it stays free. If you want to sit down with the specific pile that eats your week, that is what I do, one on one or with a whole team.</p>
+      <a class="btn" href="mailto:hello@heyaiactually.com?subject=I%20read%20the%20Safe%20AI%20Starter">Email me <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="margin:0;">AI Actually, by Anthony Proctor. Built in Denver, taught plainly. Nothing here is legal advice. Check your own workplace policy before pasting anything anywhere.</p>
+  </div>
+</footer>
+
+</body>
+</html>
