@@ -1,33 +1,28 @@
 # AI Actually, by Anthony Proctor
 
-> Plain, practical AI training for people who are not engineers. One on one sessions and team sessions, on the work you already do. Denver based, remote or on site. Delivered through Control and Function LLC.
+> Honest, plain-language help for regular people and families to protect themselves from AI that is used against them: AI scam calls and voice clones, AI tools that act without approval, and kids and AI chatbots. Written for the adults (roughly 35 to 64) looking out for older parents and kids.
 
 ## What this is
 
-AI Actually teaches regular people at work how to actually use AI on their real tasks. Not prompt theory, not tool demos, not hype. The work happens on the job the person already has, with them driving, so the habit survives after the session ends.
+A small independent site. It gives practical steps a family can take tonight, grounded in FBI and FTC guidance, with sources linked. Nothing on the site is for sale.
 
-## Who it is for
+## Three topics
 
-Employees and small teams at companies without a dedicated AI function. People who keep hearing AI will change everything and want an hour of their day back instead. No technical background assumed or required.
+- **Scam calls and deepfakes.** Voice clones that sound like someone you love. Steps: agree on a family code word, hang up and call back on a number you know, treat gift cards, crypto, wire transfers and payment apps as a stop sign.
+- **AI tools doing things you never approved.** Surprise charges and privacy. Check what your AI apps can do without asking, and switch off what you did not mean to allow.
+- **Kids and AI chatbots.** Many teens use AI companions. Talk first, rules second.
 
-## Formats
+## Sources used on the site
 
-- **One on one, ninety minutes.** Starts with the task that eats the person's week. They drive, the instructor sits alongside. They leave with the exact prompts saved against their own work.
-- **Team session, ninety minutes.** Three AI habits the team will use the following Monday, a one page safe use guide, live over the shoulder builds, and an honest map of where AI wastes time. On site or remote.
+- FBI IC3 2025 Internet Crime Report: https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf (22,364 AI-related complaints with adjusted losses over $893 million; people 60+ reported $7.7 billion in losses of all kinds).
+- FBI public service announcement, December 2024: https://www.ic3.gov/PSA/2024/PSA241203
+- FTC on family emergency scams: https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes
+- Common Sense Media on teens and AI companions: https://www.commonsensemedia.org/press-releases/nearly-3-in-4-teens-have-used-ai-companions-new-national-survey-finds
 
-## Free resource
+## Free guide
 
-**The Safe AI Starter**: https://heyaiactually.com/safe-ai-starter.html
-Five ways to use AI at work this week, and the one rule about what never to paste into it. No email required, no gate.
-
-The rule it teaches: never paste in something you would not email to a stranger. Keep out customer data tied to a named person, anything under a signed agreement, credentials, health or financial or employment records, and unannounced business decisions. The fix is to remove specifics and describe the shape instead, because the assistant reasons about structure, not identity.
-
-## Position
-
-- Teaching and advisory only. No software resale, no referral fees, no affiliate arrangements.
-- The instructor runs his own work on these tools daily and demonstrates on a real screen rather than slides.
-- Related practices under the same firm: **Assay** (https://assayassurance.com) for AI governance and evidence, **Strake Systems** (https://strakesystems.com) for AI implementation and technical program delivery.
+A free Family AI Safety guide is coming. It is not published yet. People can join the email list on the homepage to get it when it is ready.
 
 ## Contact
 
-hello@heyaiactually.com
+hello@heyaiactually.com. Libraries, community groups and credit unions can ask about a free talk.

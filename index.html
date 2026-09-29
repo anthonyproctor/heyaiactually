@@ -3,14 +3,17 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AI Actually, by Anthony Proctor</title>
-<meta name="description" content="Plain, honest help for regular people and teams who want to actually use AI. No hype, no jargon. Workshops and a free cheat sheet." />
-<meta property="og:title" content="AI Actually, by Anthony Proctor" />
-<meta property="og:description" content="Plain, honest help for regular people and teams who want to actually use AI. No hype." />
+<title>AI Actually, by Anthony Proctor | Protect your family from AI scams</title>
+<meta name="description" content="Honest, plain-language help for keeping your family safe from AI scam calls, deepfakes, AI tools that act without asking, and kids' chatbots. Free Family AI Safety guide coming soon." />
+<meta property="og:title" content="AI Actually, by Anthony Proctor: protect your family from AI used against them" />
+<meta property="og:description" content="Plain-language help with AI scam calls and voice clones, AI tools that act without asking, and kids and chatbots. Three things to do tonight, and a free family guide coming soon." />
 <meta property="og:type" content="website" />
+<meta property="og:site_name" content="AI Actually" />
 <meta property="og:url" content="https://heyaiactually.com/" />
 <link rel="canonical" href="https://heyaiactually.com/" />
 <meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="AI Actually: protect your family from AI used against them" />
+<meta name="twitter:description" content="Plain-language help with AI scam calls, deepfakes, AI tools that act without asking, and kids and chatbots." />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>" />
 <script type="application/ld+json">
 {
@@ -19,42 +22,42 @@
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "Is the Family AI Safety guide ready?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not yet. It is the first thing I am making, and I will email it to everyone on the list the day it is ready. The three things to do tonight on this page work without it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a family code word and why does it help?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a secret word or phrase your family agrees on in person. If someone calls sounding like a relative in trouble, you ask for the word. A cloned voice can copy how someone sounds, but it cannot know a word only your family knows. The FBI recommends this in its December 2024 public service announcement on generative AI fraud."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Do I need to be technical for this?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, and that is the whole point. Every session runs on the work you already do, in whatever assistant your company already pays for. No coding, no setup, nothing to install beforehand."
+        "text": "No. Everything here is written for regular people. If you can use a phone, you can do every step."
       }
     },
     {
       "@type": "Question",
-      "name": "Do I have to buy a new tool or subscription?",
+      "name": "Is anything on this site for sale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. We work in what you already have. There is nothing to purchase from me and I take no referral fees from any AI vendor, so nothing I recommend pays me."
+        "text": "No. The tips on the page are free and the guide will be free. I take no referral fees from any AI company or security product."
       }
     },
     {
       "@type": "Question",
-      "name": "Is it safe to put work information into AI?",
+      "name": "What happens to my email address?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Some of it, not all of it. The rule is never paste in something you would not email to a stranger, which keeps out customer data tied to a named person, anything under a signed agreement, credentials, health or financial or employment records, and unannounced business decisions. The fix is to remove the specifics and describe the shape instead, because the assistant reasons about structure, not identity. The free Safe AI Starter covers this in full."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How is this different from watching a video about AI?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You do the work, not me. In a video somebody demonstrates on their own example and you go back to your desk with nothing changed. Here we start with the task eating your week, you drive, and you have done it yourself before we finish."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you work with just me, or does it have to be a whole team?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Either. One on one is ninety minutes on your own pile. Team sessions are ninety minutes for a group, on site or remote. Same approach, same length, different room."
+        "text": "I use Kit to send email. It asks you to confirm your address first, every message has a one click unsubscribe, and I will not sell or share your address."
       }
     }
   ]
@@ -178,7 +181,7 @@
     border-bottom: 1px solid var(--line);
   }
   .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.85rem 0; }
-  .brand { font-family: var(--mono); font-size: var(--step--1); letter-spacing: 0.02em; display: inline-flex; align-items: baseline; gap: 0.5ch; text-decoration: none; }
+  .brand { white-space: nowrap; font-family: var(--mono); font-size: var(--step--1); letter-spacing: 0.02em; display: inline-flex; align-items: baseline; gap: 0.5ch; text-decoration: none; }
   .brand b { font-weight: 600; }
   .brand .by { color: var(--muted); }
   .brand .wave { font-family: var(--sans); }
@@ -306,13 +309,43 @@
     .cursor { animation: none; }
     .btn:active { transform: none; }
   }
+
+  /* ---- added for the family-safety rewrite ---- */
+  .stats { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
+  @media (min-width: 44rem) { .stats { grid-template-columns: 1fr 1fr; } }
+  .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1.4rem 1.5rem; }
+  .stat .num { font-family: var(--serif); font-size: var(--step-2); line-height: 1; color: var(--accent); font-weight: 600; }
+  .stat p { margin-top: 0.7rem; }
+  .source { font-family: var(--mono); font-size: var(--step--1); color: var(--muted); margin-top: 1.2rem; max-width: 46rem; }
+  .source a { color: var(--accent); }
+
+  .steps { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: 1rem; counter-reset: step; max-width: 46rem; }
+  .steps > li { counter-increment: step; display: grid; grid-template-columns: auto 1fr; gap: 1rem; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1.2rem 1.3rem; }
+  .steps > li::before { content: counter(step); font-family: var(--serif); font-size: var(--step-2); line-height: 1; color: var(--accent); font-weight: 600; min-width: 1.2ch; }
+  .steps h3 { font-size: var(--step-1); }
+  .steps p { margin-top: 0.4rem; }
+  .steps .src { display: inline-block; margin-top: 0.5rem; font-family: var(--mono); font-size: var(--step--1); color: var(--accent); }
+
+  .topics { display: grid; gap: 1rem; margin-top: 2rem; grid-template-columns: 1fr; }
+  @media (min-width: 60rem) { .topics { grid-template-columns: repeat(3, 1fr); } }
+  .topic { border: 1px solid var(--line); border-radius: 10px; padding: 1.4rem 1.4rem 1.5rem; background: var(--paper); }
+  .topic .kicker { font-family: var(--mono); font-size: var(--step--1); letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+  .topic h3 { margin-top: 0.5rem; }
+  .topic .hype { display: block; margin-top: 0.8rem; }
+  .topic p.body { margin-top: 0.8rem; }
+  .also { max-width: 46rem; margin-top: 2rem; border-left: 3px solid var(--accent); padding-left: 1.2rem; }
+  .also p + p { margin-top: 0.8rem; }
+  .talk { margin-top: 1.6rem; max-width: 42rem; }
+  .guide-list { list-style: none; padding: 0; margin: 1.2rem 0 0; display: grid; gap: 0.5rem; max-width: 40rem; }
+  .guide-list li { display: grid; grid-template-columns: auto 1fr; gap: 0.7rem; }
+  .guide-list li::before { content: "›"; font-family: var(--mono); color: var(--accent); font-weight: 700; }
 </style>
 
 <div class="page">
   <header class="site">
     <div class="wrap bar">
       <a class="brand" href="#top"><span class="wave">👋</span> <b>AI Actually</b> <span class="by">by Anthony Proctor</span></a>
-      <a class="nav-cta" href="/safe-ai-starter.html">Free cheat sheet</a>
+      <a class="nav-cta" href="#guide">Family guide</a>
     </div>
   </header>
 
@@ -323,132 +356,142 @@
       <div class="wrap hero-grid">
         <div>
           <p class="eyebrow rise">hey<span class="dot">,</span> ai actually</p>
-          <h1 class="rise d1">Everyone talks about AI. I show you how to actually use it.</h1>
-          <p class="lead rise d2">Plain, honest help for regular people and teams who feel behind. No hype, no jargon, no guru nonsense. Just me, my real screen, and the handful of moves that change how you work this week.</p>
+          <h1 class="rise d1">Keep your family safe from AI that's used against them.</h1>
+          <p class="lead rise d2">A voice that sounds just like your kid, asking for money. An AI tool that spent money you never approved. A chatbot your teenager talks to late at night. Plain, honest help for the people who look out for everyone else. No panic, no hype.</p>
           <div class="cta-row rise d2">
-            <a class="btn btn-primary" href="/safe-ai-starter.html">Get the free cheat sheet <span aria-hidden="true">→</span></a>
-            <a class="btn btn-ghost" href="#workshop">Work with me</a>
+            <a class="btn btn-primary" href="#guide">Get the guide when it's ready <span aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="#tonight">Start with 3 things tonight</a>
           </div>
         </div>
 
-        <div class="screen rise d3" role="img" aria-label="A real screen showing a plain prompt and its result.">
-          <div class="chrome"><span class="dots"><i></i><i></i><i></i></span> heyaiactually.com</div>
+        <div class="screen rise d3" role="img" aria-label="A sample phone call, written out like a chat. A cloned voice says it is in trouble and needs money today. The listener asks for the family code word, gets no answer, hangs up, and calls back on a number they already know.">
+          <div class="chrome"><span class="dots"><i></i><i></i><i></i></span> incoming call, a caught one</div>
           <div class="body">
-            <span class="ln"><span class="who">you ›</span> turn these messy meeting notes into clear action items</span>
-            <span class="ln"><span class="who ai">ai  ›</span> Done. Six owners, six due dates, nothing dropped.</span>
+            <span class="ln"><span class="who ai">caller ›</span> It's me. I'm in trouble. Please don't tell anyone. I need money today.</span>
+            <span class="ln"><span class="who">you    ›</span> Okay. What's our family word?</span>
+            <span class="ln"><span class="who ai">caller ›</span> There's no time, just send it, please.</span>
+            <span class="ln"><span class="who">you    ›</span> I'm hanging up. Calling you back on the number I know.<span class="cursor" aria-hidden="true"></span></span>
             <span class="ln dim"> </span>
-            <span class="ln"><span class="who">you ›</span> now write the follow up email in my voice, short</span>
-            <span class="ln"><span class="who ai">ai  ›</span> Drafted. Read it before you send it.<span class="cursor" aria-hidden="true"></span></span>
+            <span class="ln dim">// the voice sounded right. the word was wrong.</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FOR YOU IF -->
-    <section class="foryou">
+    <!-- WHY NOW: sourced numbers -->
+    <section id="why">
       <div class="wrap">
         <div class="col">
-          <p class="eyebrow">this is for you if</p>
-          <h2 style="margin-top:0.8rem;">You keep hearing AI will change everything, and you just want your Tuesday back.</h2>
+          <p class="eyebrow">why this matters now</p>
+          <h2 style="margin-top:0.8rem;">This isn't a future problem. The FBI is already counting it.</h2>
         </div>
-        <ul>
-          <li>You feel like everyone is using AI but you, and nobody slowed down to show you how.</li>
-          <li>You have opened a chatbot, typed something, and quietly thought, is this it.</li>
-          <li>You do not want a lecture on neural networks. You want the boring work off your plate.</li>
-          <li>You run a small team and you know AI could help, but you are worried someone will paste the wrong thing into it.</li>
-        </ul>
+        <div class="stats">
+          <div class="stat">
+            <p class="num">$893 million</p>
+            <p>Losses in complaints to the FBI in 2025 that mentioned AI, across more than 22,000 complaints.</p>
+          </div>
+          <div class="stat">
+            <p class="num">$7.7 billion</p>
+            <p>Total reported losses to online crime for people 60 and older in 2025, across 201,266 complaints. That's every kind of crime, not only AI.</p>
+          </div>
+        </div>
+        <p class="source">Source: FBI Internet Crime Complaint Center, <a href="https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf" target="_blank" rel="noopener">2025 Internet Crime Report</a> (PDF). These are only the cases people reported. AARP's <a href="https://www.aarp.org/money/scams-fraud/fbi-ftc-report-2025-losses/" target="_blank" rel="noopener">summary of the report</a> is a shorter read.</p>
       </div>
     </section>
 
-    <!-- CORRECTIONS (the brand motif) -->
-    <section>
+    <!-- THREE TOPICS -->
+    <section id="topics">
       <div class="wrap">
         <div class="col">
-          <p class="eyebrow">what this actually is</p>
-          <h2 style="margin-top:0.8rem;">The name is a promise. I cut the hype and hand you the real thing.</h2>
+          <p class="eyebrow">what I cover</p>
+          <h2 style="margin-top:0.8rem;">Three ways AI shows up in your family's life. I cover all three.</h2>
         </div>
-        <div class="corrections">
-          <div class="correction">
-            <p class="not"><s>A hype reel about the future.</s></p>
-            <p class="yes">A working session. You leave <b>using it</b>, not dreaming about it.</p>
+        <div class="topics">
+          <div class="topic">
+            <p class="kicker">1 · calls and fakes</p>
+            <h3>Scam calls, deepfakes, and cloned voices</h3>
+            <p class="hype"><s>You can't tell what's real anymore.</s></p>
+            <p class="body">You can't always tell by ear. You can tell by process: a family code word, a call back on a number you know, and a rule that gift cards and wire transfers are a stop sign.</p>
           </div>
-          <div class="correction">
-            <p class="not"><s>Prompt magic tricks you forget by Friday.</s></p>
-            <p class="yes">A few <b>real habits</b> that stick to the work you already do.</p>
+          <div class="topic">
+            <p class="kicker">2 · your own tools</p>
+            <h3>AI tools that do things you never approved</h3>
+            <p class="hype"><s>The AI just does what you tell it.</s></p>
+            <p class="body">AI apps and agents can now buy things, send messages, and read your files. People notice when a charge shows up or a private thing gets shared. I show you what to check and what to switch off.</p>
           </div>
-          <div class="correction">
-            <p class="not"><s>Your data uploaded who knows where.</s></p>
-            <p class="yes">Plain <b>guardrails</b> so nothing sensitive ever leaks.</p>
+          <div class="topic">
+            <p class="kicker">3 · kids and chatbots</p>
+            <h3>What your kids are saying to AI</h3>
+            <p class="hype"><s>It's just a homework helper.</s></p>
+            <p class="body">Many teens use AI as a friend, not only a tutor. <a href="https://www.commonsensemedia.org/press-releases/nearly-3-in-4-teens-have-used-ai-companions-new-national-survey-finds" target="_blank" rel="noopener">Common Sense Media found 72% of teens</a> had used an AI companion at least once. Talk first. Rules second.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WORKSHOP OFFER -->
-    <section id="workshop">
+    <!-- TASTE OF VALUE -->
+    <section id="tonight">
       <div class="wrap">
         <div class="col">
-          <p class="eyebrow">two ways to do this</p>
-          <h2 style="margin-top:0.8rem;">AI for Your Actual Workday</h2>
-          <p class="lead" style="margin-top:1rem;">Same approach either way. We work on the job you actually have, not a demo built to make the tool look clever. Start alone or bring the whole team.</p>
+          <p class="eyebrow">free, no signup</p>
+          <h2 style="margin-top:0.8rem;">Three things to do tonight. Fifteen minutes, one phone call.</h2>
+          <p class="lead" style="margin-top:1rem;">Start with the scam call, since it's the quickest one to fix. Do these with your parents, your partner, or your kids.</p>
         </div>
-        <div class="offer">
-          <p class="kicker">just you</p>
-          <h3>One on one, ninety minutes</h3>
-          <ul>
-            <li>We start with the thing that eats your week. Not a curriculum, your actual pile.</li>
-            <li>You drive, I sit next to you. You will have done it yourself before we hang up, which is the only way it sticks.</li>
-            <li>You leave with the exact prompts saved, on your work, ready to run again Monday.</li>
-            <li>A straight answer on the parts where AI will waste your time, so you stop trying.</li>
-          </ul>
-          <div class="foot">
-            <a class="btn btn-primary" href="https://calendly.com/controlandfunction/discovery-call?utm_source=heyaiactually&amp;utm_medium=site&amp;utm_campaign=one-on-one" target="_blank" rel="noopener">Book a one on one <span aria-hidden="true">→</span></a>
-            <a class="btn btn-ghost" href="mailto:hello@heyaiactually.com?subject=One%20on%20one%20session">Or just email me</a>
-            <span class="price">Remote <b>·</b> nothing to install beforehand</span>
-          </div>
+        <ol class="steps">
+          <li>
+            <div>
+              <h3>Pick a family code word.</h3>
+              <p>Agree on a secret word or phrase, in person or on a call you started, not in a text. Make it something a stranger couldn't guess from your social media. If anyone ever calls sounding like family in trouble, ask for the word first.</p>
+              <a class="src" href="https://www.ic3.gov/PSA/2024/PSA241203" target="_blank" rel="noopener">FBI advice, Dec 2024 →</a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Hang up and call back on a number you know.</h3>
+              <p>Don't trust the voice, even if it sounds perfect. End the call and phone the person on the number you already have for them. If you can't reach them, try another relative or a friend.</p>
+              <a class="src" href="https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes" target="_blank" rel="noopener">FTC advice on family emergency scams →</a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Make certain payments a stop sign.</h3>
+              <p>Gift cards, crypto, wire transfers, and payment apps are what scammers ask for because the money is hard to get back. Tell your family that anyone who demands one of these, urgently, is a red flag no matter who they sound like.</p>
+              <a class="src" href="https://consumer.ftc.gov/articles/how-avoid-scam" target="_blank" rel="noopener">FTC: how to avoid a scam →</a>
+            </div>
+          </li>
+        </ol>
+        <div class="also">
+          <p><b>For your own AI tools:</b> open the settings of any AI app you use and look for what it's allowed to do without asking. Buying, sending, reading your email. Turn off what you didn't mean to allow, and check your card statement for charges you don't recognize.</p>
+          <p><b>For your kids:</b> ask them to show you the chatbots they use, and ask like you're curious, not like you're catching them. <a href="https://www.commonsensemedia.org/press-releases/nearly-3-in-4-teens-have-used-ai-companions-new-national-survey-finds" target="_blank" rel="noopener">Common Sense Media recommends</a> that no one under 18 use AI companions.</p>
         </div>
-        <div class="offer">
-          <p class="kicker">your team</p>
-          <h3>Team session, ninety minutes</h3>
-          <ul>
-            <li>Three AI habits they will use Monday morning, built on their real tasks, not toy demos.</li>
-            <li>A one page safe use guide, so nobody pastes the wrong thing into the wrong tool.</li>
-            <li>Live over the shoulder builds. I share my screen and we do it together, in the room.</li>
-            <li>The honest map of what AI is good at, what it is bad at, and where it will waste your time.</li>
-          </ul>
-          <div class="foot">
-            <a class="btn btn-primary" href="https://calendly.com/controlandfunction/discovery-call?utm_source=heyaiactually&amp;utm_medium=site&amp;utm_campaign=team" target="_blank" rel="noopener">Book a team session <span aria-hidden="true">→</span></a>
-            <a class="btn btn-ghost" href="mailto:hello@heyaiactually.com?subject=Team%20session">Or just email me</a>
-            <span class="price">On site or remote <b>·</b> plain pricing, no surprises</span>
-          </div>
-        </div>
+        <p class="source">If you've already been scammed, report it at <a href="https://reportfraud.ftc.gov/" target="_blank" rel="noopener">ReportFraud.ftc.gov</a> and tell someone you trust. It happens to smart people.</p>
       </div>
     </section>
 
-    <!-- CHEAT SHEET CAPTURE -->
-    <section id="cheatsheet" class="capture">
+    <!-- GUIDE CAPTURE -->
+    <section id="guide" class="capture">
       <div class="wrap">
         <div class="card">
-          <p class="eyebrow">free, one page, no fluff</p>
-          <h2 style="margin-top:0.8rem;">The Safe AI Starter</h2>
-          <p class="lead" style="margin-top:1rem;">Five ways to actually use AI at work this week, and the one thing you should never paste into it. Made for regular people, not engineers.</p>
-          <div class="foot" style="margin-top:1.2rem;">
-            <a class="btn btn-primary" href="/safe-ai-starter.html">Read it now <span aria-hidden="true">→</span></a>
-          </div>
-          <p class="form-note">No email required to read it. The Starter stays free and ungated.</p>
+          <p class="eyebrow">free, coming soon</p>
+          <h2 style="margin-top:0.8rem;">The Family AI Safety guide</h2>
+          <p class="lead" style="margin-top:1rem;">It isn't finished yet, and I won't pretend it is. Leave your email and I'll send it the day it's ready. One email, unsubscribe anytime.</p>
+          <p style="margin-top:1.2rem;font-family:var(--mono);font-size:var(--step--1);color:var(--muted);">What I plan to put in it:</p>
+          <ul class="guide-list" style="margin-top:0.6rem;">
+            <li>A family sit-down you can finish in one evening</li>
+            <li>A script for calling your parents about scams without sounding bossy</li>
+            <li>What to check on your AI tools, and what to say to your kids about chatbots</li>
+          </ul>
 
-          <!-- EMAIL CAPTURE (Kit). PLACEHOLDERS to replace before publishing:
-               KIT_FORM_ID  = the numeric ID in the action URL of Kit's Embed > HTML code.
-               If Kit's copied HTML shows a different action URL or field name than below,
-               use Kit's. Their code wins over this draft.
-               Kit settings needed: double opt-in ON, success redirect set to
-               https://heyaiactually.com/?subscribed=1#cheatsheet -->
-          <form class="form" id="signup" action="https://app.kit.com/forms/KIT_FORM_ID/subscriptions" method="post" style="margin-top:2rem;">
-            <label for="signup-email" style="flex:1 1 100%;font-family:var(--mono);font-size:var(--step--1);color:var(--muted);">Want new free guides by email? One short note when one is ready.</label>
+          <!-- EMAIL CAPTURE (Kit). Form ID 9979581 confirmed from Kit's embed HTML on 2026-09-29.
+               Kit settings needed: double opt-in ON, after-subscribe action = redirect to
+               https://heyaiactually.com/?subscribed=1#guide
+               The mailing address in the email footer is handled inside Kit (Kit's own PO box). -->
+          <form class="form" id="signup" action="https://app.kit.com/forms/9979581/subscriptions" method="post" style="margin-top:2rem;">
+            <label for="signup-email" style="flex:1 1 100%;font-family:var(--mono);font-size:var(--step--1);color:var(--muted);">Your email, and I'll send the guide when it's ready.</label>
             <input id="signup-email" type="email" name="email_address" placeholder="you@example.com" autocomplete="email" required aria-required="true">
-            <button class="btn btn-primary" type="submit">Send me new guides</button>
+            <button class="btn btn-primary" type="submit">Get the guide when it drops</button>
           </form>
-          <p class="form-done" role="status">Check your inbox and click the confirm link. Nothing arrives until you do.</p>
+          <p class="form-done" role="status">Check your inbox and click the confirm link. Nothing arrives until you do. After that, you're on the list for the guide.</p>
           <p class="form-note">I use Kit to send these. It will ask you to confirm your email first. Unsubscribe with one click from any message. I will not sell or share your address.</p>
         </div>
       </div>
@@ -459,28 +502,28 @@
       <div class="wrap">
         <div class="col">
           <p class="eyebrow">before you ask</p>
-          <h2 style="margin-top:0.8rem;">The questions I get every time.</h2>
+          <h2 style="margin-top:0.8rem;">The questions I'd ask.</h2>
         </div>
         <div class="offer" style="margin-top:1.6rem;">
           <details style="border-bottom:1px solid var(--line);padding:0.85rem 0;">
+            <summary style="cursor:pointer;font-weight:600;">Is the Family AI Safety guide ready?</summary>
+            <p style="margin-top:0.6rem;">Not yet. It's the first thing I'm making, and I'll email it to everyone on the list the day it's ready. The three things to do tonight, above, work without it.</p>
+          </details>
+          <details style="border-bottom:1px solid var(--line);padding:0.85rem 0;">
+            <summary style="cursor:pointer;font-weight:600;">What is a family code word and why does it help?</summary>
+            <p style="margin-top:0.6rem;">It's a secret word or phrase your family agrees on in person. If someone calls sounding like a relative in trouble, you ask for the word. A cloned voice can copy how someone sounds, but it can't know a word only your family knows. The FBI recommends this in its <a href="https://www.ic3.gov/PSA/2024/PSA241203" target="_blank" rel="noopener">December 2024 public service announcement</a>.</p>
+          </details>
+          <details style="border-bottom:1px solid var(--line);padding:0.85rem 0;">
             <summary style="cursor:pointer;font-weight:600;">Do I need to be technical for this?</summary>
-            <p style="margin-top:0.6rem;">No, and that is the whole point. Every session runs on the work you already do, in whatever assistant your company already pays for. No coding, no setup, nothing to install beforehand.</p>
+            <p style="margin-top:0.6rem;">No. Everything here is written for regular people. If you can use a phone, you can do every step.</p>
           </details>
           <details style="border-bottom:1px solid var(--line);padding:0.85rem 0;">
-            <summary style="cursor:pointer;font-weight:600;">Do I have to buy a new tool or subscription?</summary>
-            <p style="margin-top:0.6rem;">No. We work in what you already have. There is nothing to purchase from me and I take no referral fees from any AI vendor, so nothing I recommend pays me.</p>
+            <summary style="cursor:pointer;font-weight:600;">Is anything on this site for sale?</summary>
+            <p style="margin-top:0.6rem;">No. The tips on the page are free and the guide will be free. I take no referral fees from any AI company or security product, so nothing I recommend pays me.</p>
           </details>
-          <details style="border-bottom:1px solid var(--line);padding:0.85rem 0;">
-            <summary style="cursor:pointer;font-weight:600;">Is it safe to put work information into AI?</summary>
-            <p style="margin-top:0.6rem;">Some of it, not all of it. The rule is never paste in something you would not email to a stranger, which keeps out customer data tied to a named person, anything under a signed agreement, credentials, health or financial or employment records, and unannounced business decisions. The fix is to remove the specifics and describe the shape instead, because the assistant reasons about structure, not identity. The free Safe AI Starter covers this in full.</p>
-          </details>
-          <details style="border-bottom:1px solid var(--line);padding:0.85rem 0;">
-            <summary style="cursor:pointer;font-weight:600;">How is this different from watching a video about AI?</summary>
-            <p style="margin-top:0.6rem;">You do the work, not me. In a video somebody demonstrates on their own example and you go back to your desk with nothing changed. Here we start with the task eating your week, you drive, and you have done it yourself before we finish.</p>
-          </details>
-          <details style="border-bottom:1px solid var(--line);padding:0.85rem 0;">
-            <summary style="cursor:pointer;font-weight:600;">Can you work with just me, or does it have to be a whole team?</summary>
-            <p style="margin-top:0.6rem;">Either. One on one is ninety minutes on your own pile. Team sessions are ninety minutes for a group, on site or remote. Same approach, same length, different room.</p>
+          <details style="padding:0.85rem 0;">
+            <summary style="cursor:pointer;font-weight:600;">What happens to my email address?</summary>
+            <p style="margin-top:0.6rem;">I use Kit to send email. It asks you to confirm your address first, every message has a one click unsubscribe, and I won't sell or share your address.</p>
           </details>
         </div>
       </div>
@@ -491,13 +534,14 @@
       <div class="wrap">
         <div class="col">
           <p class="eyebrow">who is this guy</p>
-          <h2 style="margin-top:0.8rem;">I am Anthony. I am not an influencer, and I do not sell magic.</h2>
+          <h2 style="margin-top:0.8rem;">I'm Anthony. I'm not an influencer, and I don't sell fear.</h2>
           <div class="stack" style="margin-top:1.3rem;">
-            <p>I am a builder who runs my own work on AI every single day. I would rather show you my actual screen than sell you a dream, because the dream is not the point. The point is you getting an hour of your day back.</p>
-            <p>If what I show you does not actually help by Monday, I wasted your time. And I really do not like wasting people's time.</p>
+            <p>I'm a builder who uses AI every day, so I know how good it is and how it can be turned on the people around you. I'd rather give you a plain step you can do tonight than a scary headline you'll forget by Friday.</p>
+            <p>If what I share doesn't help you protect someone you love, I wasted your time. I really don't like wasting people's time.</p>
           </div>
-          <p style="margin-top:1.1rem;">I wrote a book on this, <a href="https://www.amazon.com/dp/B0H8LNPVJK" target="_blank" rel="noopener">available on Amazon</a>, for the same reason I built this site. Most AI writing is aimed at people who already get it.</p>
-          <p class="sign">// built in Denver. taught plainly.</p>
+          <p style="margin-top:1.1rem;">I also wrote a book on using AI, <a href="https://www.amazon.com/dp/B0H8LNPVJK" target="_blank" rel="noopener">available on Amazon</a>, for the same reason I built this site. Most AI writing is aimed at people who already get it.</p>
+          <p class="talk">Run a library, a community group, or a credit union? I'm happy to give a free talk on AI scams for your members. <a href="mailto:hello@heyaiactually.com?subject=Free%20talk">Email me</a>.</p>
+          <p class="sign">// built in Denver. explained plainly.</p>
         </div>
       </div>
     </section>
@@ -508,21 +552,21 @@
       <div class="foot-grid">
         <div class="foot-brand">👋 <b>AI Actually</b>, by Anthony Proctor · <span class="url">heyaiactually.com</span></div>
         <div class="foot-links">
-          <a href="/safe-ai-starter.html">Cheat sheet</a>
-          <a href="#workshop">Work with me</a>
+          <a href="#tonight">Tonight</a>
+          <a href="#guide">Family guide</a>
           <a href="#faq">FAQ</a>
           <a href="mailto:hello@heyaiactually.com">Contact</a>
           <a href="https://www.linkedin.com/in/anthonyproctor/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
-      <p class="fineprint">&copy; 2026 AI Actually, by Anthony Proctor &middot; Training and advisory delivered through Control and Function LLC &middot; Denver, Colorado &middot; <a href="mailto:hello@heyaiactually.com">hello@heyaiactually.com</a></p>
+      <p class="fineprint">&copy; 2026 AI Actually, by Anthony Proctor &middot; Denver, Colorado &middot; <a href="mailto:hello@heyaiactually.com">hello@heyaiactually.com</a></p>
     </div>
   </footer>
 </div>
 
 <script>
   // After Kit's double opt-in form redirects back with ?subscribed=1, show the thank-you state.
-  try { if (new URLSearchParams(location.search).get('subscribed') === '1') { document.getElementById('cheatsheet').classList.add('sent'); } } catch (e) {}
+  try { if (new URLSearchParams(location.search).get('subscribed') === '1') { document.getElementById('guide').classList.add('sent'); } } catch (e) {}
 </script>
 </body>
 </html>
