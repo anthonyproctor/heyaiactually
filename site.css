@@ -51,13 +51,14 @@ header.site { position: sticky; top: 0; z-index: 20; background: var(--cream); b
 .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: var(--header); }
 .logo { display: inline-flex; align-items: center; min-height: 44px; }
 .logo img { display: block; height: 40px; width: auto; }
-@media (max-width: 420px) { .logo img { height: 30px; } }
+@media (max-width: 480px) { .logo img { height: 30px; } }
+@media (max-width: 380px) { .logo img { height: 26px; } .bar { gap: .75rem; } }
 .btn { font: inherit; font-weight: 600; font-size: 1.0625rem; line-height: 1.2; min-height: 50px; padding: .7rem 1.4rem; border-radius: 999px; border: 2.5px solid var(--ink); background: var(--clay-deep); color: var(--cream); text-decoration: none; display: inline-flex; align-items: center; justify-content: center; text-align: center; cursor: pointer; box-shadow: 4px 4px 0 var(--ink); transition: transform .15s ease-out, box-shadow .15s ease-out; }
 .btn:hover { color: var(--cream); transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
 .btn.quiet { background: var(--paper); color: var(--ink); }
 .btn.quiet:hover { color: var(--ink); }
 .btn.small { min-height: 46px; padding: .5rem 1.1rem; font-size: 1rem; white-space: nowrap; }
-@media (max-width: 420px) { .btn.small { padding: .5rem .9rem; box-shadow: 3px 3px 0 var(--ink); } }
+@media (max-width: 480px) { .btn.small { padding: .5rem .9rem; box-shadow: 3px 3px 0 var(--ink); } }
 
 /* ---------- hero ---------- */
 .hero { padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(3rem, 7vw, 5rem); }
@@ -213,10 +214,8 @@ footer.site { border-top: 2px solid var(--ink); padding: 2.5rem 0 3rem; }
 .navlink { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; font-weight: 500; font-size: 1.0625rem; text-decoration: none; border-bottom: 3px solid transparent; }
 .navlink:hover { border-bottom-color: var(--clay); }
 .navlink[aria-current="page"] { border-bottom-color: var(--clay-deep); }
-.logo picture { display: contents; }
-.logo { min-width: 44px; }
-/* Under 440px the full wordmark and two nav items don't fit, so the header shows the mark alone. */
-@media (max-width: 440px) { .logo img { height: 38px; } }
+/* On small screens the wordmark and Early access fill the bar, so Labs lives in the footer there. */
+@media (max-width: 599px) { .topnav .navlink { display: none; } }
 
 /* ---------- labs ---------- */
 /* The window color is a custom property so a shadow copy of a home stays solid ink. */
@@ -262,3 +261,6 @@ footer.site { border-top: 2px solid var(--ink); padding: 2.5rem 0 3rem; }
 .talk-grid .sub { margin-top: 1.25rem; max-width: 42ch; }
 .talk-mail { margin-top: 1.25rem; }
 .talk-mail .btn { width: 100%; overflow-wrap: anywhere; }
+
+/* Narrowest phones and 400% zoom: keep the wordmark and Early access on one line. */
+@media (max-width: 350px) { .logo img { height: 22px; } .btn.small { padding: .5rem .75rem; font-size: .95rem; } }
