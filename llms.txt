@@ -1,27 +1,24 @@
-# AI Actually, by Anthony Proctor
+# AI Actually
 
-> Honest, plain-language help for regular people and families to protect themselves from AI that is used against them: AI scam calls and voice clones, AI tools that act without approval, and kids and AI chatbots. Written for the adults (roughly 35 to 64) looking out for older parents and kids.
+> AI Actually is a personal AI in development that is being built to protect families from AI used against them: AI scam calls, cloned voices and deepfakes; AI tools and agents that act without permission; and chatbots talking to kids. It is not available yet. There is no app, no price, and no launch date. People can join the early access list on the homepage.
 
-## What this is
+## Status
 
-A small independent site. It gives practical steps a family can take tonight, grounded in FBI and FTC guidance, with sources linked. The tips and the guide are free. The only paid thing linked is the author's book on putting AI to work, sold on Amazon.
+In development, research stage. Nothing is for sale. Early access members will hear first when there is a version to try and when pricing is decided.
 
-## Three topics
+## What it is being built to do
 
-- **Scam calls and deepfakes.** Voice clones that sound like someone you love. Steps: agree on a family code word, hang up and call back on a number you know, treat gift cards, crypto, wire transfers and payment apps as a stop sign.
-- **AI tools doing things you never approved.** Surprise charges and privacy. Check what your AI apps can do without asking, and switch off what you did not mean to allow.
-- **Kids and AI chatbots.** Many teens use AI companions. Talk first, rules second.
+- **Scam calls, cloned voices, and deepfakes.** Spot a call or video that doesn't add up, such as a familiar voice pushing for money in a hurry, and walk the person through checking before they pay.
+- **AI tools that act without asking.** Watch the AI apps and agents a person already uses, and check with them before one buys, sends, or shares something they didn't approve.
+- **Kids and chatbots.** Show parents which chatbots their kids are talking to, and flag conversations that go somewhere they shouldn't.
 
-## Sources used on the site
+## The problem, with sources
 
 - FBI IC3 2025 Internet Crime Report: https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf (22,364 AI-related complaints with adjusted losses over $893 million; people 60+ reported $7.7 billion in losses of all kinds).
-- FBI public service announcement, December 2024: https://www.ic3.gov/PSA/2024/PSA241203
-- FTC on family emergency scams: https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes
-- Common Sense Media on teens and AI companions: https://www.commonsensemedia.org/press-releases/nearly-3-in-4-teens-have-used-ai-companions-new-national-survey-finds
 
-## Free guide
+## Who is building it
 
-A free Family AI Safety guide is coming. It is not published yet. People can join the email list on the homepage to get it when it is ready.
+Anthony Proctor, founder, Denver, Colorado. AI Actually is independent and takes no money or referral fees from any AI company or security product.
 
 ## Privacy
 
@@ -29,4 +26,4 @@ https://heyaiactually.com/privacy.html
 
 ## Contact
 
-hello@heyaiactually.com. Libraries, community groups and credit unions can ask about a free talk.
+hello@heyaiactually.com
