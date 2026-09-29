@@ -435,7 +435,21 @@
           <div class="foot" style="margin-top:1.2rem;">
             <a class="btn btn-primary" href="/safe-ai-starter.html">Read it now <span aria-hidden="true">→</span></a>
           </div>
-          <p class="form-note">No email required. No list, no funnel, no drip sequence. It is just there.</p>
+          <p class="form-note">No email required to read it. The Starter stays free and ungated.</p>
+
+          <!-- EMAIL CAPTURE (Kit). PLACEHOLDERS to replace before publishing:
+               KIT_FORM_ID  = the numeric ID in the action URL of Kit's Embed > HTML code.
+               If Kit's copied HTML shows a different action URL or field name than below,
+               use Kit's. Their code wins over this draft.
+               Kit settings needed: double opt-in ON, success redirect set to
+               https://heyaiactually.com/?subscribed=1#cheatsheet -->
+          <form class="form" id="signup" action="https://app.kit.com/forms/KIT_FORM_ID/subscriptions" method="post" style="margin-top:2rem;">
+            <label for="signup-email" style="flex:1 1 100%;font-family:var(--mono);font-size:var(--step--1);color:var(--muted);">Want new free guides by email? One short note when one is ready.</label>
+            <input id="signup-email" type="email" name="email_address" placeholder="you@example.com" autocomplete="email" required aria-required="true">
+            <button class="btn btn-primary" type="submit">Send me new guides</button>
+          </form>
+          <p class="form-done" role="status">Check your inbox and click the confirm link. Nothing arrives until you do.</p>
+          <p class="form-note">I use Kit to send these. It will ask you to confirm your email first. Unsubscribe with one click from any message. I will not sell or share your address.</p>
         </div>
       </div>
     </section>
@@ -506,5 +520,9 @@
   </footer>
 </div>
 
+<script>
+  // After Kit's double opt-in form redirects back with ?subscribed=1, show the thank-you state.
+  try { if (new URLSearchParams(location.search).get('subscribed') === '1') { document.getElementById('cheatsheet').classList.add('sent'); } } catch (e) {}
+</script>
 </body>
 </html>
