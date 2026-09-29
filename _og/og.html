@@ -1,46 +1,76 @@
 <!doctype html>
 <!-- Source for /og.png (1200x630). Not published: Jekyll skips folders that start with an underscore.
-     Regenerate with headless Chrome at a 1200x630 viewport, device scale 1. -->
+     Regenerate: serve the repo root locally, open /_og/og.html in headless Chrome at a 1200x630 viewport,
+     device scale 1, and screenshot. Uses the site's own fonts, logo and illustration. -->
 <html lang="en"><head><meta charset="utf-8"><title>og</title>
+<link rel="stylesheet" href="/site.css">
 <style>
-  :root { --paper:#FBFAF5; --ink:#1B1811; --muted:#6B6250; --surface:#F2EFE6; --line:#E4DECF; --accent:#0F6E78;
-    --screen-bg:#1A1811; --screen-ink:#ECE6D7; --screen-muted:#9E947E; --screen-accent:#43B9C3; --screen-line:#322D20;
-    --serif: Charter, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-    --mono: ui-monospace, "SF Mono", Menlo, monospace; --sans: system-ui, -apple-system, sans-serif; }
   html,body { margin:0; width:1200px; height:630px; overflow:hidden; }
-  body { background:var(--paper); color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased; }
-  .frame { position:absolute; inset:0; padding:64px 80px 56px; display:grid; grid-template-columns: 1fr 410px; gap:48px; align-items:center; }
-  .eyebrow { font-family:var(--mono); font-size:24px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0; }
-  .eyebrow .dot { color:var(--accent); }
-  h1 { font-family:var(--serif); font-weight:600; font-size:64px; line-height:1.04; letter-spacing:-.015em; margin:22px 0 0; text-wrap:balance; }
-  .brand { position:absolute; left:80px; right:80px; bottom:48px; display:flex; justify-content:space-between; align-items:baseline; font-family:var(--mono); font-size:26px; border-top:2px solid var(--line); padding-top:22px; }
-  .brand .by { color:var(--muted); }
-  .brand .url { color:var(--accent); }
-  .screen { background:var(--screen-bg); color:var(--screen-ink); border:1px solid var(--screen-line); border-radius:10px; font-family:var(--mono); font-size:20px; line-height:1.55; box-shadow:0 30px 60px -30px rgba(0,0,0,.5); margin-bottom:70px; }
-  .chrome { padding:12px 16px; border-bottom:1px solid var(--screen-line); color:var(--screen-muted); font-size:15px; letter-spacing:.08em; text-transform:uppercase; }
-  .body { padding:18px 18px 22px; }
-  .ln { display:block; }
-  .who { color:var(--screen-accent); } .ai { color:var(--screen-muted); }
-  .dim { color:var(--screen-muted); margin-top:10px; }
-  .note { margin:6px 0; padding-left:12px; border-left:2px solid var(--screen-accent); }
-  .note .who { font-weight:600; }
-  .frame > div:first-child { margin-bottom:70px; }
+  body { background: var(--cream); }
+  .og { position:absolute; inset:0; display:grid; grid-template-columns: 1fr 470px; gap:32px; align-items:center; padding:48px 64px 88px; }
+  .og h1 { font-size:68px; line-height:1.02; margin-top:22px; }
+  .og .pill { font-size:22px; padding:6px 16px; margin:0; }
+  .brandbar { position:absolute; left:0; right:0; bottom:0; height:78px; border-top:3px solid var(--ink); background: var(--sun); display:flex; align-items:center; justify-content:space-between; padding:0 64px; }
+  .brandbar img { height:44px; }
+  .brandbar span { font-family: var(--text); font-weight:600; font-size:28px; }
+  .art svg { width:100%; height:auto; overflow:visible; }
 </style></head>
 <body>
-  <div class="frame">
-    <div>
-      <p class="eyebrow">in development<span class="dot"> ·</span> early access</p>
-      <h1>One AI that protects you from the rest.</h1>
-    </div>
-    <div class="screen">
-      <div class="chrome">concept sketch</div>
-      <div class="body">
-        <span class="ln dim" style="margin-top:0">// a text you forwarded</span>
-        <span class="ln"><span class="who ai">new number ›</span> Hi, it's me. I need $400 in gift cards today.</span>
-        <span class="ln note"><span class="who">AI Actually ›</span> Likely a scam. New number, urgent money, gift cards.</span>
-        <span class="ln note"><span class="who">AI Actually ›</span> Call them back on the number you already have.</span>
-      </div>
-    </div>
+<svg width="0" height="0" class="sr-only" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="s-mail" viewBox="0 0 100 90">
+      <rect x="6" y="14" width="88" height="62" rx="9"/>
+      <path class="flap" d="M10,20 L50,50 L90,20"/>
+      <circle class="d" cx="82" cy="16" r="12"/>
+      <rect x="80" y="8" width="4" height="10" rx="2" fill="var(--cream)"/>
+      <circle cx="82" cy="22" r="2.2" fill="var(--cream)"/>
+    </symbol>
+    <symbol id="s-chat" viewBox="0 0 100 90">
+      <path d="M90,8 h-80 a8,8 0 0 0 -8,8 v44 a8,8 0 0 0 8,8 h50 l16,14 v-14 h14 a8,8 0 0 0 8,-8 v-44 a8,8 0 0 0 -8,-8z"/>
+      <path class="d" d="M50,56 C 30,42 31,22 43,22 C 47,22 50,26 50,29 C 50,26 53,22 57,22 C 69,22 70,42 50,56Z"/>
+    </symbol>
+    <symbol id="s-agent" viewBox="0 0 100 90">
+      <rect x="4" y="10" width="76" height="58" rx="9"/>
+      <g class="d"><rect x="14" y="22" width="34" height="7" rx="3.5"/><rect x="14" y="36" width="48" height="7" rx="3.5"/><rect x="14" y="50" width="22" height="7" rx="3.5"/></g>
+      <path class="l" d="M56,34 v44 l11,-10 l9,18 l9,-4.5 l-9,-18 l15,-1z"/>
+    </symbol>
+    <symbol id="s-text" viewBox="0 0 100 90">
+      <rect x="28" y="2" width="44" height="86" rx="10"/>
+      <rect class="l" x="35" y="18" width="30" height="12" rx="6"/>
+      <rect class="d" x="41" y="36" width="24" height="12" rx="6"/>
+      <rect class="d" x="43" y="78" width="14" height="4" rx="2"/>
+    </symbol>
+  </defs>
+</svg>
+<div class="og">
+  <div>
+    <p class="pill">In development. Early access is open.</p>
+    <h1>One AI that protects you <span class="warm">from the rest.</span></h1>
   </div>
-  <div class="brand"><span>👋 <b>AI Actually</b> <span class="by">personal AI, in development</span></span><span class="url">heyaiactually.com</span></div>
+  <div class="art"><svg viewBox="0 0 560 520" aria-hidden="true">
+          
+          <rect x="30" y="486" width="500" height="14" rx="7" fill="var(--ink)"/>
+          <path d="M118,488 V226 A162,162 0 0 1 442,226 V488" fill="none" stroke="var(--clay-deep)" stroke-width="5" stroke-dasharray="4 14" stroke-linecap="round"/>
+          <path d="M156,494 V232 A124,124 0 0 1 404,232 V494 Z" fill="var(--ink)" transform="translate(7 7)"/>
+          <path d="M156,494 V232 A124,124 0 0 1 404,232 V494 Z" fill="var(--sun-soft)" stroke="var(--ink)" stroke-width="3"/>
+          <circle cx="280" cy="222" r="82" fill="var(--sun)"/>
+          <line x1="280" y1="108" x2="280" y2="178" stroke="var(--ink)" stroke-width="3"/>
+          <path d="M252,204 L262,178 H298 L308,204 Z" fill="var(--clay)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="280" cy="212" r="8" fill="var(--cream)" stroke="var(--ink)" stroke-width="3"/>
+          <path d="M156,440 H404 V494 H156 Z" fill="var(--sage)" stroke="var(--ink)" stroke-width="3"/>
+          <rect x="206" y="392" width="150" height="14" rx="4" fill="var(--clay)" stroke="var(--ink)" stroke-width="3"/>
+          <path d="M220,406 V458 M342,406 V458" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/>
+          <path d="M300,362 h30 v30 h-30 z" fill="var(--cream)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M330,370 a9,9 0 0 1 0,16" fill="none" stroke="var(--ink)" stroke-width="3"/>
+          <rect x="232" y="382" width="48" height="10" rx="3" fill="var(--ink)"/>
+          <path d="M184,440 l6,-30 h28 l6,30 z" fill="var(--clay-deep)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round"/>
+          <ellipse cx="195" cy="392" rx="10" ry="20" fill="var(--sage)" stroke="var(--ink)" stroke-width="3" transform="rotate(-20 195 392)"/>
+          <ellipse cx="214" cy="386" rx="10" ry="24" fill="var(--sage)" stroke="var(--ink)" stroke-width="3" transform="rotate(16 214 386)"/>
+          <g class="settle" transform="translate(4 70) rotate(-8 50 45)"><use href="#s-mail" width="100" height="90" class="shadow" transform="translate(5 5)"/><use href="#s-mail" width="100" height="90" class="stk" fill="var(--clay)"/></g>
+          <g class="settle" transform="translate(456 110) rotate(7 50 45)"><use href="#s-chat" width="100" height="90" class="shadow" transform="translate(5 5)"/><use href="#s-chat" width="100" height="90" class="stk" fill="var(--sage)"/></g>
+          <g class="settle" transform="translate(0 300) rotate(5 50 45)"><use href="#s-agent" width="100" height="90" class="shadow" transform="translate(5 5)"/><use href="#s-agent" width="100" height="90" class="stk" fill="var(--sun)"/></g>
+          <g class="settle" transform="translate(460 320) rotate(-6 50 45)"><use href="#s-text" width="100" height="90" class="shadow" transform="translate(5 5)"/><use href="#s-text" width="100" height="90" class="stk" fill="var(--cream)"/></g>
+        </svg></div>
+</div>
+<div class="brandbar"><img src="/brand/logo.svg" alt=""><span>heyaiactually.com</span></div>
 </body></html>

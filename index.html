@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://heyaiactually.goatcounter.com; connect-src 'self' https://heyaiactually.goatcounter.com; font-src 'self'; form-action 'self' https://app.kit.com https://*.kit.com https://*.convertkit.com; base-uri 'none'; object-src 'none'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at; style-src 'self'; img-src 'self' data: https://heyaiactually.goatcounter.com; connect-src 'self' https://heyaiactually.goatcounter.com; font-src 'self'; manifest-src 'self'; form-action 'self' https://app.kit.com https://*.kit.com https://*.convertkit.com; base-uri 'none'; object-src 'none'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta name="color-scheme" content="only light" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI Actually | One AI that protects you from the rest</title>
-<meta name="description" content="A personal AI in development, built to protect you from cloned voice scams, AI tools that act without asking, and chatbots that push too far." />
+<meta name="description" content="A personal AI in development that will sit in your browser and email and warn you, in plain words, about scams, AI tools that act without asking, and chatbots that push too far." />
 <meta property="og:title" content="AI Actually: one AI that protects you from the rest" />
-<meta property="og:description" content="A personal AI in development, built to protect you from cloned voice scams, AI tools that act without asking, and chatbots that push too far. Join early access." />
+<meta property="og:description" content="A personal AI in development that will warn you, in plain words, about scams, AI tools that act without asking, and chatbots that push too far. Join early access." />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="AI Actually" />
 <meta property="og:url" content="https://heyaiactually.com/" />
@@ -17,14 +17,21 @@
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="AI Actually. One AI that protects you from the rest. In development, early access open. heyaiactually.com" />
+<meta property="og:image:alt" content="AI Actually. One AI that protects you from the rest. A warm lit arch with scam messages kept outside. In development, early access open." />
 <link rel="canonical" href="https://heyaiactually.com/" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="AI Actually: one AI that protects you from the rest" />
-<meta name="twitter:description" content="A personal AI in development, built to protect you from cloned voice scams, AI tools that act without asking, and chatbots that push too far." />
+<meta name="twitter:description" content="A personal AI in development that will warn you, in plain words, about scams, AI tools that act without asking, and chatbots that push too far." />
 <meta name="twitter:image" content="https://heyaiactually.com/og.png" />
-<meta name="twitter:image:alt" content="AI Actually. One AI that protects you from the rest. In development, early access open. heyaiactually.com" />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>" />
+<meta name="twitter:image:alt" content="AI Actually. One AI that protects you from the rest. A warm lit arch with scam messages kept outside. In development, early access open." />
+<link rel="icon" href="/favicon.ico" sizes="48x48" />
+<link rel="icon" href="/icon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#fbf4e6" />
+<link rel="preload" href="/fonts/caprasimo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/lexend-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/site.css" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,9 +41,10 @@
       "@id": "https://heyaiactually.com/#org",
       "name": "AI Actually",
       "url": "https://heyaiactually.com/",
+      "logo": "https://heyaiactually.com/icon-512.png",
       "image": "https://heyaiactually.com/og.png",
       "email": "hello@heyaiactually.com",
-      "description": "AI Actually is building a personal AI to protect people from AI used against them: scam calls and cloned voices, AI tools that act without permission, and chatbots that manipulate or push too far. In development; not yet available.",
+      "description": "AI Actually is building a personal AI that will sit in a person's web browser and email and warn them, in plain words, about scams and fake messages, AI tools that act without permission, and chatbots that push too far. In development; not yet available.",
       "founder": { "@type": "Person", "name": "Anthony Proctor" }
     },
     {
@@ -50,447 +58,278 @@
   ]
 }
 </script>
-<script data-goatcounter="https://heyaiactually.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://heyaiactually.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <meta name="msvalidate.01" content="F024BF07DAB188D1FAC954E560FC2747" />
 </head>
 <body>
-<style>
-  /* ============ AI ACTUALLY ============
-     Design language: "plain talk, real screen."
-     Warm ink ground + a single petrol-teal note. A cool accent on a
-     warm ground reads calm and competent, not hyped. Serif that reads
-     human over the name, humanist sans for reading, monospace as the
-     signature voice, because the brand is "I show you my screen."
-     The "real screen" cards stay dark in both themes on purpose:
-     a terminal is a terminal. ================================= */
+<a class="skip" href="#top">Skip to main content</a>
 
-  :root {
-    --paper:   #FBFAF5;
-    --ink:     #1B1811;
-    --muted:   #6B6250;
-    --surface: #F2EFE6;
-    --line:    #E4DECF;
-    --accent:  #0F6E78;   /* petrol teal, legible on paper */
-    --accent-soft: #DCEEEF;
-    --on-accent: #FBFAF5;
+<!-- The sticker set: one drawing system, used for every illustration on the page. -->
+<svg width="0" height="0" class="sr-only" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="s-mail" viewBox="0 0 100 90">
+      <rect x="6" y="14" width="88" height="62" rx="9"/>
+      <path class="flap" d="M10,20 L50,50 L90,20"/>
+      <circle class="d" cx="82" cy="16" r="12"/>
+      <rect x="80" y="8" width="4" height="10" rx="2" fill="var(--cream)"/>
+      <circle cx="82" cy="22" r="2.2" fill="var(--cream)"/>
+    </symbol>
+    <symbol id="s-chat" viewBox="0 0 100 90">
+      <path d="M90,8 h-80 a8,8 0 0 0 -8,8 v44 a8,8 0 0 0 8,8 h50 l16,14 v-14 h14 a8,8 0 0 0 8,-8 v-44 a8,8 0 0 0 -8,-8z"/>
+      <path class="d" d="M50,56 C 30,42 31,22 43,22 C 47,22 50,26 50,29 C 50,26 53,22 57,22 C 69,22 70,42 50,56Z"/>
+    </symbol>
+    <symbol id="s-agent" viewBox="0 0 100 90">
+      <rect x="4" y="10" width="76" height="58" rx="9"/>
+      <g class="d"><rect x="14" y="22" width="34" height="7" rx="3.5"/><rect x="14" y="36" width="48" height="7" rx="3.5"/><rect x="14" y="50" width="22" height="7" rx="3.5"/></g>
+      <path class="l" d="M56,34 v44 l11,-10 l9,18 l9,-4.5 l-9,-18 l15,-1z"/>
+    </symbol>
+    <symbol id="s-text" viewBox="0 0 100 90">
+      <rect x="28" y="2" width="44" height="86" rx="10"/>
+      <rect class="l" x="35" y="18" width="30" height="12" rx="6"/>
+      <rect class="d" x="41" y="36" width="24" height="12" rx="6"/>
+      <rect class="d" x="43" y="78" width="14" height="4" rx="2"/>
+    </symbol>
+  </defs>
+</svg>
 
-    /* screen cards: constant across themes */
-    --screen-bg:     #1A1811;
-    --screen-panel:  #211E15;
-    --screen-ink:    #ECE6D7;
-    --screen-muted:  #9E947E;
-    --screen-accent: #43B9C3;
-    --screen-line:   #322D20;
+<header class="site">
+  <div class="wrap bar">
+    <a class="logo" href="/"><img src="/brand/logo.svg" alt="AI Actually, home" width="277" height="42" /></a>
+    <a class="btn small" href="#early-access">Early access</a>
+  </div>
+</header>
 
-    --measure: 40rem;
-    --serif: Charter, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
-    --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --mono: ui-monospace, "SF Mono", "Menlo", "Cascadia Mono", "Consolas", monospace;
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="pill">In development. Early access is open.</p>
+        <h1 id="hero-title">One AI that protects you <span class="warm">from the rest.</span></h1>
+        <p class="lead">Think of it as a porch light for your browser and inbox. We're building an always on helper that keeps an eye out for scams, fake messages and pushy AI, and tells you in plain words when something isn't right.</p>
+        <div class="cta-row">
+          <a class="btn" href="#early-access">Get early access</a>
+          <a class="btn quiet" href="#what-it-watches">What it will watch for</a>
+        </div>
+        <p class="note">Nothing to install yet. We'll email you when there's something to try.</p>
+      </div>
 
-    --step--1: clamp(0.95rem, 0.93rem + 0.1vw, 1rem);
-    --step-0:  clamp(1.125rem, 1.09rem + 0.15vw, 1.2rem);
-    --step-1:  clamp(1.3rem, 1.2rem + 0.5vw, 1.6rem);
-    --step-2:  clamp(1.7rem, 1.4rem + 1.4vw, 2.5rem);
-    --step-3:  clamp(2.5rem, 1.9rem + 3vw, 4.4rem);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --paper:   #15140E;
-      --ink:     #ECE6D7;
-      --muted:   #A69C85;
-      --surface: #1D1A12;
-      --line:    #302B1E;
-      --accent:  #43B9C3;
-      --accent-soft: #0F2325;
-      --on-accent: #15140E;
-    }
-  }
-  :root[data-theme="light"] {
-    --paper:#FBFAF5; --ink:#1B1811; --muted:#6B6250; --surface:#F2EFE6;
-    --line:#E4DECF; --accent:#0F6E78; --accent-soft:#DCEEEF; --on-accent:#FBFAF5;
-  }
-  :root[data-theme="dark"] {
-    --paper:#15140E; --ink:#ECE6D7; --muted:#A69C85; --surface:#1D1A12;
-    --line:#302B1E; --accent:#43B9C3; --accent-soft:#0F2325; --on-accent:#15140E;
-  }
-
-  * { box-sizing: border-box; }
-  :root { color-scheme: only light; }
-  html { scroll-padding-top: 5.5rem; }
-  body { margin: 0; background: #FBFAF5; }
-
-  .page {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: var(--sans);
-    font-size: var(--step-0);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: clip;
-  }
-  .wrap {
-    width: 100%;
-    max-width: 68rem;
-    margin: 0 auto;
-    padding: 0 clamp(1.25rem, 5vw, 3rem);
-  }
-  .col { max-width: var(--measure); }
-
-  a { color: inherit; }
-  ::selection { background: var(--accent); color: var(--on-accent); }
-
-  /* ---- eyebrows / labels ---- */
-  .eyebrow {
-    font-family: var(--mono);
-    font-size: var(--step--1);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .eyebrow .dot { color: var(--accent); }
-
-  /* ---- type ---- */
-  h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.05; text-wrap: balance; margin: 0; }
-  h1 { font-size: var(--step-3); letter-spacing: -0.015em; }
-  h2 { font-size: var(--step-2); letter-spacing: -0.01em; }
-  h3 { font-size: var(--step-1); line-height: 1.15; }
-  p { margin: 0; }
-  .lead { font-size: var(--step-1); line-height: 1.4; color: var(--ink); font-family: var(--sans); font-weight: 400; }
-
-  /* the correction motif: hype struck, the truth in accent */
-  .hype { color: var(--muted); text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: color-mix(in srgb, var(--muted) 60%, transparent); }
-  .real { color: var(--accent); font-style: normal; }
-
-  /* ---- header ---- */
-  header.site {
-    position: sticky; top: 0; z-index: 20;
-    background: color-mix(in srgb, var(--paper) 86%, transparent);
-    backdrop-filter: saturate(1.1) blur(8px);
-    border-bottom: 1px solid var(--line);
-  }
-  .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.7rem; }
-  .brand { white-space: nowrap; font-family: var(--mono); font-size: var(--step--1); letter-spacing: 0.02em; display: inline-flex; flex-wrap: wrap; align-items: baseline; column-gap: 0.5ch; row-gap: 0; min-height: 44px; align-content: center; text-decoration: none; min-width: 0; }
-  .brand b { font-weight: 600; }
-  .brand .wave { font-family: var(--sans); }
-  .nav-cta {
-    font-family: var(--mono); font-size: var(--step--1);
-    text-decoration: none; padding: 0.5rem 0.9rem; border-radius: 2px;
-    border: 1px solid var(--accent); color: var(--accent);
-    white-space: nowrap; flex: 0 0 auto; min-height: 44px; display: inline-flex; align-items: center;
-    transition: background .18s ease, color .18s ease;
-  }
-  .nav-cta:hover { background: var(--accent); color: var(--on-accent); }
-
-  /* ---- sections ---- */
-  section { padding: clamp(3.5rem, 8vw, 6.5rem) 0; border-top: 1px solid var(--line); }
-  section:first-of-type { border-top: 0; }
-  .stack > * + * { margin-top: 1.25rem; }
-
-  /* ---- hero ---- */
-  .hero { padding-top: clamp(3rem, 7vw, 5.5rem); }
-  .hero-grid { display: grid; grid-template-columns: 1fr; gap: clamp(2rem, 5vw, 3.5rem); align-items: center; }
-  @media (min-width: 60rem) { .hero-grid { grid-template-columns: 1.05fr 0.95fr; } }
-  .hero h1 { margin-top: 1rem; }
-  .hero .lead { margin-top: 1.4rem; max-width: 34rem; }
-  .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
-
-  .btn {
-    font-family: var(--mono); font-size: var(--step--1);
-    text-decoration: none; display: inline-flex; align-items: center; gap: 0.6ch;
-    padding: 0.85rem 1.2rem; border-radius: 2px; border: 1px solid transparent;
-    transition: transform .12s ease, background .18s ease, border-color .18s ease;
-  }
-  .btn:active { transform: translateY(1px); }
-  .btn-primary { background: var(--accent); color: var(--on-accent); }
-  .btn-primary:hover { background: color-mix(in srgb, var(--accent) 88%, black); }
-  .btn-ghost { border-color: var(--line); color: var(--ink); }
-  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
-
-  a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
-    outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px;
-  }
-
-  /* ---- the "real screen" card ---- */
-  .screen {
-    background: var(--screen-bg); color: var(--screen-ink);
-    border: 1px solid var(--screen-line); border-radius: 8px;
-    font-family: var(--mono); font-size: 1rem; line-height: 1.65;
-    overflow: hidden; box-shadow: 0 24px 60px -30px rgba(0,0,0,.55);
-  }
-  .screen .chrome { display: flex; align-items: center; gap: 0.5ch; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--screen-line); color: var(--screen-muted); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; }
-  .screen .dots { display: inline-flex; gap: 0.4ch; margin-right: 0.5ch; }
-  .screen .dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--screen-line); }
-  .screen .body { padding: 1.1rem 1.1rem 1.3rem; }
-  .screen .ln { display: block; white-space: pre-wrap; }
-  .screen .who { color: var(--screen-accent); }
-  .screen .who.ai { color: var(--screen-muted); }
-  .screen .dim { color: var(--screen-muted); }
-  .cursor { display: inline-block; width: 0.6ch; height: 1.05em; background: var(--screen-accent); transform: translateY(0.15em); animation: blink 1.05s steps(2, jump-none) 3; }
-  @keyframes blink { 50% { opacity: 0; } }
-
-  /* ---- offer card ---- */
-  .offer { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: clamp(1.5rem, 4vw, 2.5rem); margin-top: 2rem; }
-  /* ---- early access capture (the centerpiece) ---- */
-  .capture { background: var(--accent-soft); border-top-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
-  .capture .card { max-width: 46rem; }
-  .capture h2 .real { text-decoration: none; }
-  .form { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.6rem; max-width: 34rem; }
-  .form input[type="email"] {
-    flex: 1 1 16rem; min-width: 0;
-    font-family: var(--mono); font-size: var(--step-0);
-    padding: 0.85rem 1rem; border-radius: 2px;
-    border: 1px solid color-mix(in srgb, var(--ink) 22%, transparent);
-    background: var(--paper); color: var(--ink);
-  }
-  .form input::placeholder { color: var(--muted); }
-  .form .btn-primary { flex: 0 0 auto; cursor: pointer; border: 0; }
-  .form-note { font-family: var(--mono); font-size: var(--step--1); color: var(--muted); margin-top: 0.9rem; }
-  .form-done { display: none; font-family: var(--mono); font-size: var(--step-0); color: var(--accent); margin-top: 1.4rem; }
-  .capture.sent .form { display: none; }
-  .capture.sent .form-done { display: block; }
-
-
-  /* ---- footer ---- */
-  footer { border-top: 1px solid var(--line); padding: 2.5rem 0 3.5rem; }
-  .foot-grid { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: baseline; justify-content: space-between; }
-  .foot-brand { font-family: var(--mono); font-size: var(--step--1); }
-  .foot-brand .url { color: var(--accent); }
-  .foot-links { display: flex; flex-wrap: wrap; column-gap: 1.5rem; row-gap: 0; font-family: var(--mono); font-size: var(--step--1); }
-  .foot-links a { color: var(--muted); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
-  .foot-links a:hover { color: var(--accent); }
-  .fineprint { color: var(--muted); font-size: var(--step--1); margin-top: 1rem; font-family: var(--mono); line-height: 1.7; }
-  .fineprint a { display: inline-block; padding-block: 0.6rem; }
-
-  /* load motion, kept restrained */
-  .rise { opacity: 0; transform: translateY(14px); animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
-  .rise.d1 { animation-delay: .06s; } .rise.d2 { animation-delay: .12s; } .rise.d3 { animation-delay: .18s; }
-  @keyframes rise { to { opacity: 1; transform: none; } }
-
-  @media (prefers-reduced-motion: reduce) {
-    .rise { animation: none; opacity: 1; transform: none; }
-    .cursor { animation: none; }
-    .btn:active { transform: none; }
-    *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-  }
-
-  /* ---- stats, product areas, FAQ ---- */
-  .stats { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
-  @media (min-width: 44rem) { .stats { grid-template-columns: 1fr 1fr; } }
-  .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1.4rem 1.5rem; }
-  .stat .num { font-family: var(--serif); font-size: var(--step-2); line-height: 1; color: var(--accent); font-weight: 600; }
-  .stat p { margin-top: 0.7rem; }
-  .source { font-family: var(--mono); font-size: var(--step--1); color: var(--muted); margin-top: 1.2rem; max-width: 46rem; }
-  .source a { color: var(--accent); }
-
-  .topics { display: grid; gap: 1rem; margin-top: 2rem; grid-template-columns: 1fr; }
-  @media (min-width: 60rem) { .topics { grid-template-columns: repeat(3, 1fr); } }
-  .topic { border: 1px solid var(--line); border-radius: 10px; padding: 1.4rem 1.4rem 1.5rem; background: var(--paper); }
-  .topic .kicker { font-family: var(--mono); font-size: var(--step--1); letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
-  .topic h3 { margin-top: 0.5rem; }
-  .topic .hype { display: block; margin-top: 0.8rem; }
-  .topic p.body { margin-top: 0.8rem; }
-  .faq details { border-bottom: 1px solid var(--line); padding: 0.25rem 0; }
-  .faq details:last-child { border-bottom: 0; }
-  .faq summary { cursor: pointer; font-weight: 600; min-height: 44px; padding-block: 0.6rem; display: list-item; }
-  .faq details p { margin: 0.2rem 0 0.8rem; }
-  .form-note a { color: var(--accent); display: inline-block; padding-block: 0.65rem; }
-  .source, .form-note, .fineprint, .form label { font-size: 1rem !important; }
-  .status { list-style: none; padding: 0; margin: 1.6rem 0 0; display: grid; gap: 0.6rem; max-width: 40rem; }
-  .status li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; align-items: baseline; }
-  .status .when { font-family: var(--mono); font-size: 1rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
-  @media (max-width: 30rem) { .status li { grid-template-columns: 1fr; gap: 0.1rem; } }
-  .screen .ln + .ln { margin-top: 0.15rem; }
-  .screen .note { margin: 0.35rem 0 0.45rem; padding: 0.35rem 0 0.35rem 0.8rem; border-left: 2px solid var(--screen-accent); color: var(--screen-ink); }
-  .screen .note .who { font-weight: 600; }
-  .founder .col { max-width: 42rem; }
-  .founder .sign { font-family: var(--mono); font-size: 1rem; color: var(--muted); margin-top: 1.5rem; }
-  .founder .sign a { color: var(--accent); display: inline-flex; align-items: center; min-height: 44px; }
-  .anchor { display: block; position: relative; top: -1px; }
-</style>
-
-<div class="page">
-  <header class="site">
-    <div class="wrap bar">
-      <a class="brand" href="#top"><span class="wave">👋</span> <b>AI Actually</b></a>
-      <a class="nav-cta" href="#early-access">Early access</a>
+      <figure class="art">
+        <svg viewBox="0 0 560 520" role="img" aria-labelledby="art-title">
+          <title id="art-title">Illustration: a warm lit arch with a lamp, a small table, a mug and a plant inside, circled by a dashed ring. Outside the ring are a scam email, a pushy AI cursor, a clingy chat bubble and a scam text, kept out.</title>
+          <rect x="30" y="486" width="500" height="14" rx="7" fill="var(--ink)"/>
+          <path d="M118,488 V226 A162,162 0 0 1 442,226 V488" fill="none" stroke="var(--clay-deep)" stroke-width="5" stroke-dasharray="4 14" stroke-linecap="round"/>
+          <path d="M156,494 V232 A124,124 0 0 1 404,232 V494 Z" fill="var(--ink)" transform="translate(7 7)"/>
+          <path d="M156,494 V232 A124,124 0 0 1 404,232 V494 Z" fill="var(--sun-soft)" stroke="var(--ink)" stroke-width="3"/>
+          <circle cx="280" cy="222" r="82" fill="var(--sun)"/>
+          <line x1="280" y1="108" x2="280" y2="178" stroke="var(--ink)" stroke-width="3"/>
+          <path d="M252,204 L262,178 H298 L308,204 Z" fill="var(--clay)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="280" cy="212" r="8" fill="var(--cream)" stroke="var(--ink)" stroke-width="3"/>
+          <path d="M156,440 H404 V494 H156 Z" fill="var(--sage)" stroke="var(--ink)" stroke-width="3"/>
+          <rect x="206" y="392" width="150" height="14" rx="4" fill="var(--clay)" stroke="var(--ink)" stroke-width="3"/>
+          <path d="M220,406 V458 M342,406 V458" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/>
+          <path d="M300,362 h30 v30 h-30 z" fill="var(--cream)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M330,370 a9,9 0 0 1 0,16" fill="none" stroke="var(--ink)" stroke-width="3"/>
+          <rect x="232" y="382" width="48" height="10" rx="3" fill="var(--ink)"/>
+          <path d="M184,440 l6,-30 h28 l6,30 z" fill="var(--clay-deep)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round"/>
+          <ellipse cx="195" cy="392" rx="10" ry="20" fill="var(--sage)" stroke="var(--ink)" stroke-width="3" transform="rotate(-20 195 392)"/>
+          <ellipse cx="214" cy="386" rx="10" ry="24" fill="var(--sage)" stroke="var(--ink)" stroke-width="3" transform="rotate(16 214 386)"/>
+          <g class="settle" transform="translate(4 70) rotate(-8 50 45)"><use href="#s-mail" width="100" height="90" class="shadow" transform="translate(5 5)"/><use href="#s-mail" width="100" height="90" class="stk" fill="var(--clay)"/></g>
+          <g class="settle" transform="translate(456 110) rotate(7 50 45)"><use href="#s-chat" width="100" height="90" class="shadow" transform="translate(5 5)"/><use href="#s-chat" width="100" height="90" class="stk" fill="var(--sage)"/></g>
+          <g class="settle" transform="translate(0 300) rotate(5 50 45)"><use href="#s-agent" width="100" height="90" class="shadow" transform="translate(5 5)"/><use href="#s-agent" width="100" height="90" class="stk" fill="var(--sun)"/></g>
+          <g class="settle" transform="translate(460 320) rotate(-6 50 45)"><use href="#s-text" width="100" height="90" class="shadow" transform="translate(5 5)"/><use href="#s-text" width="100" height="90" class="stk" fill="var(--cream)"/></g>
+        </svg>
+      </figure>
     </div>
-  </header>
+  </section>
 
-  <main id="top">
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <p class="eyebrow rise">in development<span class="dot"> ·</span> early access</p>
-          <h1 class="rise d1">One AI that protects you from the rest.</h1>
-          <p class="lead rise d2">A voice or a text that sounds like someone you know, asking for money. An AI tool that buys or shares something you never approved. A chatbot that gets a little too friendly. We're building AI Actually, a personal AI on your side. It helps you check a call, text, or message before you act, so none of that costs you.</p>
-          <div class="cta-row rise d2">
-            <a class="btn btn-primary" href="#early-access">Join early access <span aria-hidden="true">→</span></a>
-          </div>
-        </div>
-
-        <div class="screen rise d3" role="img" aria-label="A concept sketch, not a working app. Someone forwards a text to AI Actually. The text, from an unknown number, says: Hi, it's me. New number, lost my phone. I'm in trouble and need 400 dollars in gift cards today. Please don't tell anyone. AI Actually replies: likely a scam. The signs are a new number, an urgent money ask, a request for secrecy, and gift cards, which are hard to get back. Then it says what to do: call them back on the number you already have, and don't pay with gift cards.">
-          <div class="chrome"><span class="dots"><i></i><i></i><i></i></span> concept · not built yet</div>
-          <div class="body">
-            <span class="ln dim">// a text you forwarded to AI Actually</span>
-            <span class="ln"><span class="who ai">new number ›</span> Hi, it's me. New number, lost my phone. I'm in trouble and need $400 in gift cards today. Please don't tell anyone.</span>
-            <span class="ln note"><span class="who">AI Actually ›</span> Likely a scam. The signs: a new number, an urgent money ask, a request to keep it secret, and gift cards, which are hard to get back.</span>
-            <span class="ln note"><span class="who">AI Actually ›</span> Call them back on the number you already have. Don't pay with gift cards.<span class="cursor" aria-hidden="true"></span></span>
-          </div>
-        </div>
+  <!-- CONCEPT ALERT -->
+  <section class="band tint" id="how-it-works" aria-labelledby="concept-title">
+    <div class="wrap concept-grid">
+      <div class="concept-copy">
+        <span class="tag">The idea</span>
+        <h2 class="big" id="concept-title">When something looks wrong, it speaks up.</h2>
+        <p>Before you click, pay or reply, you'd get a short note in plain words: what looks off, and the safe next step. No jargon and no scare tactics.</p>
+        <p class="plan">Planned first: your web browser and your email. Text alerts on Android phones come after that.</p>
       </div>
-    </section>
-
-    <!-- THE PROBLEM: sourced numbers -->
-    <section id="why">
-      <div class="wrap">
-        <div class="col">
-          <p class="eyebrow">the problem</p>
-          <h2 style="margin-top:0.8rem;">This isn't a future problem. The FBI is already counting it.</h2>
-        </div>
-        <div class="stats">
-          <div class="stat">
-            <p class="num">$893 million</p>
-            <p>Losses in complaints to the FBI in 2025 that mentioned AI, across more than 22,000 complaints.</p>
+      <div>
+        <p class="concept-label"><b>CONCEPT</b> Not a working product yet.</p>
+        <figure class="stage" role="img" aria-label="Concept, not a working product yet. An email in an inbox, from Account Security at secure verify login dot co, with the subject: Your account is locked. Verify now. A note from AI Actually sits on top of it. It says: Hold on. This email isn't from your bank. It says your account is locked and pushes you to act now, and the link goes to a web address made last week, not your bank's real site. Safe next step: don't click. Open your bank's app, or call the number on the back of your card. Two buttons: Move to junk, and Show me why.">
+          <div class="inbox" aria-hidden="true">
+            <div class="inbox-bar">Inbox</div>
+            <div class="mail">
+              <p class="from">Account Security &lt;alerts@secure-verify-login.co&gt;</p>
+              <p class="subj">Your account is locked. Verify now.</p>
+              <div class="lines"><i></i><i></i><i></i></div>
+            </div>
           </div>
-          <div class="stat">
-            <p class="num">$7.7 billion</p>
-            <p>Total reported losses to online crime for people 60 and older in 2025, across 201,266 complaints. That's every kind of crime, not only AI.</p>
+          <div class="alert" aria-hidden="true">
+            <div class="alert-top"><span><img src="/brand/mark.svg" alt="" width="42" height="40" /> Email check</span><span>Concept</span></div>
+            <p class="verdict">Hold on.</p>
+            <h3>This email isn't from your bank.</h3>
+            <p>It says your account is locked and pushes you to act now. The link goes to a web address made last week, not your bank's real site.</p>
+            <p class="next">Safe next step: don't click. Open your bank's app, or call the number on the back of your card.</p>
+            <div class="alert-actions"><span class="btn">Move to junk</span><span class="btn quiet">Show me why</span></div>
           </div>
-        </div>
-        <p class="source">Source: FBI Internet Crime Complaint Center, <a href="https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf" target="_blank" rel="noopener">2025 Internet Crime Report</a> (PDF). These are only the cases people reported. AARP's <a href="https://www.aarp.org/money/scams-fraud/fbi-ftc-report-2025-losses/" target="_blank" rel="noopener">summary of the report</a> is a shorter read.</p>
+        </figure>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- WHAT IT'S BEING BUILT TO DO -->
-    <section id="what-it-does">
-      <div class="wrap">
-        <div class="col">
-          <p class="eyebrow">what we're building</p>
-          <h2 style="margin-top:0.8rem;">Three kinds of protection in one AI that works for you.</h2>
-        </div>
-        <div class="topics">
-          <div class="topic">
-            <p class="kicker">1 · calls and fakes</p>
-            <h3>Scam calls, cloned voices, and deepfakes</h3>
-            <p class="hype"><s>You can't tell what's real anymore.</s></p>
-            <p class="body">Built to help you check a call, text, or message that doesn't add up. Forward it or describe it, and get a plain answer and what to do next, before you pay a thing.</p>
-          </div>
-          <div class="topic">
-            <p class="kicker">2 · your own AI</p>
-            <h3>AI tools that act without asking</h3>
-            <p class="hype"><s>The AI just does what you tell it.</s></p>
-            <p class="body">Built to watch the AI apps and agents you already use, and to stop and check with you before one of them buys, sends, or shares something you didn't approve.</p>
-          </div>
-          <div class="topic">
-            <p class="kicker">3 · chatbots and companions</p>
-            <h3>Chatbots that get too close</h3>
-            <p class="hype"><s>It's just being friendly.</s></p>
-            <p class="body">Built to notice when an AI chat is pushing you, flattering you into sharing more than you meant to, or steering you somewhere you didn't choose.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EARLY ACCESS CAPTURE -->
-    <section id="early-access" class="capture">
-      <span id="guide" class="anchor" aria-hidden="true"></span>
-      <div class="wrap">
-        <div class="card">
-          <p class="eyebrow">early access</p>
-          <h2 style="margin-top:0.8rem;">Be first to try it.</h2>
-          <p class="lead" style="margin-top:1rem;">AI Actually isn't built yet, and we won't pretend it is. Join the early access list and you'll hear from us before anyone else when there's something to try.</p>
-          <ul class="status">
-            <li><span class="when">Now</span><span>Researching what people worry about most.</span></li>
-            <li><span class="when">Next</span><span>A first version for early access members to try.</span></li>
-            <li><span class="when">Not set yet</span><span>Price and launch date. You'll hear about both first.</span></li>
-          </ul>
-
-          <!-- EMAIL CAPTURE (Kit). Form ID 9979581 confirmed from Kit's embed HTML on 2026-09-29.
-               Kit's after-subscribe redirect is https://heyaiactually.com/?subscribed=1#guide ;
-               the #guide anchor above keeps that landing here. -->
-          <form class="form" id="signup" action="https://app.kit.com/forms/9979581/subscriptions" method="post" style="margin-top:2rem;">
-            <label for="signup-email" style="flex:1 1 100%;font-family:var(--mono);font-size:var(--step--1);color:var(--muted);">Your email, for early access news.</label>
-            <input id="signup-email" type="email" name="email_address" placeholder="you@example.com" autocomplete="email" required aria-required="true">
-            <button class="btn btn-primary" type="submit">Join early access</button>
-          </form>
-          <p class="form-done" role="status">Check your inbox and click the confirm link. Nothing arrives until you do. After that, you're on the early access list.</p>
-          <p class="form-note">We use Kit to send email. It asks you to confirm your address first, and every message has a one click unsubscribe. We won't sell or share your address. <a href="privacy.html">Privacy policy</a>.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOUNDER NOTE -->
-    <section class="founder" id="why-we-build">
-      <div class="wrap">
-        <div class="col">
-          <p class="eyebrow">why we're building it</p>
-          <h2 style="margin-top:0.8rem;">If AI is going to be used against us, we need one on our side.</h2>
-          <div class="stack" style="margin-top:1.3rem;">
-            <p>I'm Anthony Proctor. I build with AI every day, so I know how good it is. I also know how easily it can be turned on you and the people around you. A voice can be copied. An AI tool can spend money before you notice. A chatbot can get close enough that you tell it things you'd never tell a stranger.</p>
-            <p>Most of the advice out there asks you to be on guard all the time. That's not fair to anyone. So we're building one AI whose whole job is to look out for you. I'd rather ship something small that works than promise something big that doesn't.</p>
-          </div>
-          <p class="sign">// Anthony Proctor, founder. Denver, Colorado.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="wrap">
-        <div class="col">
-          <p class="eyebrow">questions</p>
-          <h2 style="margin-top:0.8rem;">What people ask us.</h2>
-        </div>
-        <div class="offer faq" style="margin-top:1.6rem;">
-          <details>
-            <summary>What is AI Actually?</summary>
-            <p>A personal AI we're building to protect you from AI used against you: scam calls and cloned voices, AI tools that act without asking, and chatbots that push too far. One helper on your side, instead of a separate fix for each problem.</p>
-          </details>
-          <details>
-            <summary>Is it available?</summary>
-            <p>Not yet. It's in development, and there's nothing to download today. People on the early access list get first access when there's a version to try.</p>
-          </details>
-          <details>
-            <summary>What will it cost?</summary>
-            <p>We haven't decided. Early access members will hear about pricing first, before anything is for sale.</p>
-          </details>
-          <details>
-            <summary>Will I need to be technical?</summary>
-            <p>No. We're designing it for people who'd rather not think about AI at all.</p>
-          </details>
-          <details>
-            <summary>What happens to my email address?</summary>
-            <p>We use Kit to send email. It asks you to confirm your address first, every message has a one click unsubscribe, and we won't sell or share your address. The <a href="privacy.html">privacy policy</a> has the details.</p>
-          </details>
-          <details>
-            <summary>Who's building it?</summary>
-            <p>Anthony Proctor, a builder in Denver, Colorado. AI Actually is independent. It takes no money or referral fees from any AI company or security product.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+  <!-- THREE PROTECTIONS -->
+  <section class="band" id="what-it-watches" aria-labelledby="protect-title">
+    <span id="what-it-does" class="anchor" aria-hidden="true"></span>
     <div class="wrap">
-      <div class="foot-grid">
-        <div class="foot-brand">👋 <b>AI Actually</b> · <span class="url">heyaiactually.com</span></div>
-        <div class="foot-links">
-          <a href="#what-it-does">What it does</a>
-          <a href="#early-access">Early access</a>
-          <a href="#faq">FAQ</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="mailto:hello@heyaiactually.com">Contact</a>
+      <div class="head">
+        <h2 class="big" id="protect-title">Three things it's being built to keep outside.</h2>
+        <p>You shouldn't need to be an expert to stay safe. That's its job.</p>
+      </div>
+      <div class="row">
+        <div class="frame clay" aria-hidden="true"><svg viewBox="0 0 110 100"><use href="#s-mail" width="100" height="90" class="shadow" x="5" y="5"/><use href="#s-mail" width="100" height="90" class="stk" fill="var(--cream)"/></svg></div>
+        <div>
+          <span class="tag">One</span>
+          <h3>Scam emails, texts and cloned voices</h3>
+          <p>An email that says your account is locked. A message from a "new number" asking for gift cards. It's being built to flag the warning signs in your inbox and browser and give you the safe next step. If a call or voice message didn't sound right, you'll be able to describe it and get a plain answer about whether it could be a cloned voice.</p>
         </div>
       </div>
-      <p class="fineprint">&copy; 2026 AI Actually &middot; Denver, Colorado &middot; <a href="mailto:hello@heyaiactually.com">hello@heyaiactually.com</a></p>
+      <div class="row flip">
+        <div class="frame sun" aria-hidden="true"><svg viewBox="0 0 110 100"><use href="#s-agent" width="100" height="90" class="shadow" x="5" y="5"/><use href="#s-agent" width="100" height="90" class="stk" fill="var(--cream)"/></svg></div>
+        <div>
+          <span class="tag">Two</span>
+          <h3>AI tools acting without your OK</h3>
+          <p>AI assistants can now send email, buy things and change settings for you. It's being built to warn you when one tries something you never approved, and let you stop it.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="frame sage" aria-hidden="true"><svg viewBox="0 0 110 100"><use href="#s-chat" width="100" height="90" class="shadow" x="5" y="5"/><use href="#s-chat" width="100" height="90" class="stk" fill="var(--cream)"/></svg></div>
+        <div>
+          <span class="tag">Three</span>
+          <h3>Chatbots that get too close</h3>
+          <p>Some AI companions are built to keep you talking, or to ask for money and personal details. It's being built to tell you when a conversation starts to cross that line.</p>
+        </div>
+      </div>
     </div>
-  </footer>
-</div>
+  </section>
 
-<script src="site.js"></script>
+  <!-- THE PROBLEM, SOURCED -->
+  <section class="band tint" id="why" aria-labelledby="why-title">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="big" id="why-title">This isn't a future problem. The FBI is already counting it.</h2>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <p class="num">$893 million</p>
+          <p>Losses in complaints to the FBI in 2025 that mentioned AI, across more than 22,000 complaints.</p>
+        </div>
+        <div class="stat">
+          <p class="num">$7.7 billion</p>
+          <p>Total reported losses to online crime for people 60 and older in 2025, across 201,266 complaints. That's every kind of crime, not only AI.</p>
+        </div>
+      </div>
+      <p class="source">Source: FBI Internet Crime Complaint Center, <a href="https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf" rel="noopener">2025 Internet Crime Report</a> (PDF). These are only the cases people reported. AARP's <a href="https://www.aarp.org/money/scams-fraud/fbi-ftc-report-2025-losses/" rel="noopener">summary of the report</a> is a shorter read.</p>
+    </div>
+  </section>
+
+  <!-- EARLY ACCESS -->
+  <section class="band sun" id="early-access" aria-labelledby="early-title">
+    <span id="guide" class="anchor" aria-hidden="true"></span>
+    <div class="wrap">
+      <p class="form-done" role="status"><b>Almost there.</b> Check your inbox and click the confirm link. Nothing arrives until you do. After that, you're on the early access list.</p>
+    </div>
+    <div class="wrap early-grid">
+      <div>
+        <h2 id="early-title">Come help us build it.</h2>
+        <p class="sub">AI Actually isn't built yet, and we won't pretend it is. We're looking for early testers, people of every comfort level with tech. Leave your email and you'll hear from us first when there's something real to try.</p>
+        <ul class="status" aria-label="Where it's at">
+          <li><span class="when">Now</span><span>Designing the first version and talking with people about what worries them most.</span></li>
+          <li><span class="when">Next</span><span>A first version for early access members to try.</span></li>
+          <li><span class="when">Planned first</span><span>A browser extension and an email connection. Text alerts on Android after that.</span></li>
+          <li><span class="when">Not set yet</span><span>Price and launch date. You'll hear about both first.</span></li>
+        </ul>
+      </div>
+      <div class="archcard">
+        <h3>Save me a spot</h3>
+        <!-- EMAIL CAPTURE (Kit). Form ID 9979581 confirmed from Kit's embed HTML on 2026-09-29.
+             Kit's after-subscribe redirect is https://heyaiactually.com/?subscribed=1#guide ;
+             the #guide anchor above keeps that landing here, and site.js shows the thank-you state. -->
+        <form id="signup" action="https://app.kit.com/forms/9979581/subscriptions" method="post">
+          <label for="signup-email">Your email</label>
+          <input id="signup-email" type="email" name="email_address" placeholder="you@example.com" autocomplete="email" required aria-required="true" />
+          <button class="btn" type="submit">Get early access</button>
+          <p class="fine">For adults. Kit sends our email: you confirm your address first, and every message has a one click unsubscribe. We won't sell or share it. <a href="/privacy.html">Privacy policy</a></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER NOTE -->
+  <section class="band" id="why-we-build" aria-labelledby="founder-title">
+    <div class="wrap founder-card">
+      <span class="tag">Why we're building it</span>
+      <h2 id="founder-title">If AI is going to be used against us, we need one on our side.</h2>
+      <p>I'm Anthony Proctor. I build with AI every day, so I know how good it is. I also know how easily it can be turned on you. A voice can be copied. An AI tool can spend money before you notice. A chatbot can get close enough that you tell it things you'd never tell a stranger.</p>
+      <p>Most of the advice out there asks you to be on guard all the time. That's not fair to anyone. So we're building one AI whose whole job is to look out for you. I'd rather ship something small that works than promise something big that doesn't.</p>
+      <p class="sign">Anthony Proctor, founder. Denver, Colorado.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="band tint" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="big" id="faq-title">What people ask us.</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>What is AI Actually?</summary>
+          <p>A personal AI we're building to protect you from AI used against you. It's meant to sit in your web browser and your email and speak up when something looks wrong: scams and fake messages, AI tools that act without asking, and chatbots that push too far.</p>
+        </details>
+        <details>
+          <summary>Is it available?</summary>
+          <p>Not yet. It's in development, and there's nothing to download today. People on the early access list get first access when there's a version to try.</p>
+        </details>
+        <details>
+          <summary>Will it listen to my phone calls?</summary>
+          <p>No. It won't listen to or record your calls. If a call or voice message seemed off, you'll be able to describe it and get a plain answer about what to do next.</p>
+        </details>
+        <details>
+          <summary>Who is it for?</summary>
+          <p>Adults, at any comfort level with tech. We're designing it for people who'd rather not think about AI at all.</p>
+        </details>
+        <details>
+          <summary>What will it cost?</summary>
+          <p>We haven't decided. Early access members will hear about pricing first, before anything is for sale.</p>
+        </details>
+        <details>
+          <summary>What happens to my email address?</summary>
+          <p>We use Kit to send email. It asks you to confirm your address first, every message has a one click unsubscribe, and we won't sell or share your address. The <a href="/privacy.html">privacy policy</a> has the details.</p>
+        </details>
+        <details>
+          <summary>Who's building it?</summary>
+          <p>Anthony Proctor, a builder in Denver, Colorado. AI Actually is independent. It takes no money or referral fees from any AI company or security product.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <img src="/brand/logo-mono.svg" alt="AI Actually" width="277" height="42" />
+      <nav class="foot-links" aria-label="Footer">
+        <a href="#what-it-watches">What it does</a>
+        <a href="#early-access">Early access</a>
+        <a href="#faq">FAQ</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="mailto:hello@heyaiactually.com">Contact</a>
+      </nav>
+    </div>
+    <p class="fineprint">&copy; 2026 AI Actually. Denver, Colorado. In development: nothing here is for sale yet. <a href="mailto:hello@heyaiactually.com">hello@heyaiactually.com</a></p>
+  </div>
+</footer>
+
+<script src="/site.js"></script>
 </body>
 </html>

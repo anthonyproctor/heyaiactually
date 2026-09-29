@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://heyaiactually.goatcounter.com; connect-src 'self' https://heyaiactually.goatcounter.com; font-src 'self'; form-action 'self'; base-uri 'none'; object-src 'none'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at; style-src 'self'; img-src 'self' data: https://heyaiactually.goatcounter.com; connect-src 'self' https://heyaiactually.goatcounter.com; font-src 'self'; manifest-src 'self'; form-action 'self'; base-uri 'none'; object-src 'none'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta name="color-scheme" content="only light" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,65 +17,31 @@
 <meta property="og:image" content="https://heyaiactually.com/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="AI Actually. One AI that protects you from the rest. In development, early access open. heyaiactually.com" />
+<meta property="og:image:alt" content="AI Actually. One AI that protects you from the rest. A warm lit arch with scam messages kept outside. In development, early access open." />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>" />
-<script data-goatcounter="https://heyaiactually.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-<style>
-  :root {
-    color-scheme: only light;
-    --paper: #FBFAF5; --ink: #1B1811; --muted: #6B6250; --surface: #F2EFE6;
-    --line: #E4DECF; --accent: #0F6E78; --on-accent: #FBFAF5;
-    --serif: Charter, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
-    --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --mono: ui-monospace, "SF Mono", "Menlo", "Cascadia Mono", "Consolas", monospace;
-    --small: clamp(0.95rem, 0.93rem + 0.1vw, 1rem);
-  }
-  * { box-sizing: border-box; }
-  html { scroll-padding-top: 5.5rem; }
-  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: clamp(1.125rem, 1.09rem + 0.15vw, 1.2rem); line-height: 1.65; -webkit-font-smoothing: antialiased; }
-  a { color: var(--accent); }
-  ::selection { background: var(--accent); color: var(--on-accent); }
-  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
-  .wrap { width: 100%; max-width: 68rem; margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 3rem); }
-  header.site { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--paper) 90%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
-  .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.7rem; }
-  .brand { font-family: var(--mono); font-size: var(--small); color: var(--ink); text-decoration: none; display: inline-flex; flex-wrap: wrap; align-items: baseline; align-content: center; column-gap: 0.5ch; min-height: 44px; white-space: nowrap; }
-  .brand b { font-weight: 600; }
-  .nav-cta { font-family: var(--mono); font-size: var(--small); text-decoration: none; padding: 0.5rem 0.9rem; border-radius: 2px; border: 1px solid var(--accent); color: var(--accent); white-space: nowrap; flex: 0 0 auto; min-height: 44px; display: inline-flex; align-items: center; }
-  .nav-cta:hover { background: var(--accent); color: var(--on-accent); }
-  main { padding: clamp(3rem, 7vw, 5rem) 0 clamp(3rem, 7vw, 5rem); }
-  .col { max-width: 42rem; }
-  .eyebrow { font-family: var(--mono); font-size: var(--small); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin: 0; }
-  h1, h2 { font-family: var(--serif); font-weight: 600; line-height: 1.1; text-wrap: balance; }
-  h1 { font-size: clamp(2.2rem, 1.7rem + 2.4vw, 3.4rem); letter-spacing: -0.015em; margin: 0.8rem 0 0; }
-  h2 { font-size: clamp(1.4rem, 1.25rem + 0.8vw, 1.8rem); margin: 2.6rem 0 0; }
-  p, ul { margin: 1rem 0 0; }
-  ul { padding-left: 1.3rem; }
-  li + li { margin-top: 0.5rem; }
-  .updated { font-family: var(--mono); font-size: var(--small); color: var(--muted); margin-top: 1rem; }
-  .summary { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1.3rem 1.4rem; margin-top: 2rem; }
-  .summary p:first-child { margin-top: 0; }
-  footer { border-top: 1px solid var(--line); padding: 2rem 0 3rem; }
-  .foot-links { display: flex; flex-wrap: wrap; column-gap: 1.5rem; font-family: var(--mono); font-size: var(--small); }
-  .foot-links a { color: var(--muted); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
-  .foot-links a:hover { color: var(--accent); }
-  .fineprint { color: var(--muted); font-size: var(--small); font-family: var(--mono); margin-top: 1rem; }
-  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
-</style>
+<link rel="icon" href="/favicon.ico" sizes="48x48" />
+<link rel="icon" href="/icon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#fbf4e6" />
+<link rel="preload" href="/fonts/caprasimo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/lexend-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/site.css" />
+<script data-goatcounter="https://heyaiactually.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
-  <header class="site">
-    <div class="wrap bar">
-      <a class="brand" href="/"><span>👋</span> <b>AI Actually</b></a>
-      <a class="nav-cta" href="/#early-access">Early access</a>
-    </div>
-  </header>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site">
+  <div class="wrap bar">
+    <a class="logo" href="/"><img src="/brand/logo.svg" alt="AI Actually, home" width="277" height="42" /></a>
+    <a class="btn small" href="/#early-access">Early access</a>
+  </div>
+</header>
 
-  <main>
-    <div class="wrap">
-      <div class="col">
-        <p class="eyebrow">privacy</p>
+<main id="main" class="doc">
+  <div class="wrap">
+    <div class="col">
+        <span class="tag">Privacy</span>
         <h1>What this site collects, and what we do with it.</h1>
         <p class="updated">Last updated September 29, 2026</p>
 
@@ -113,24 +79,27 @@
         </ul>
 
         <h2>Children</h2>
-        <p>The early access list is for adults. It isn't aimed at children under 13, and we don't knowingly collect email addresses from them. If you think a child signed up, email us and we'll delete the address.</p>
+        <p>The early access list is for adults 18 and over. It isn't aimed at children, and we don't knowingly collect email addresses from anyone under 13. If you think a child signed up, email us and we'll delete the address.</p>
 
         <h2>Changes</h2>
         <p>If this policy changes, we'll update it here and change the date at the top.</p>
       </div>
-    </div>
-  </main>
+  </div>
+</main>
 
-  <footer>
-    <div class="wrap">
-      <div class="foot-links">
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <img src="/brand/logo-mono.svg" alt="AI Actually" width="277" height="42" />
+      <nav class="foot-links" aria-label="Footer">
         <a href="/">Home</a>
         <a href="/#early-access">Early access</a>
         <a href="/#faq">FAQ</a>
         <a href="mailto:hello@heyaiactually.com">Contact</a>
-      </div>
-      <p class="fineprint">&copy; 2026 AI Actually &middot; Denver, Colorado</p>
+      </nav>
     </div>
-  </footer>
+    <p class="fineprint">&copy; 2026 AI Actually. Denver, Colorado. <a href="mailto:hello@heyaiactually.com">hello@heyaiactually.com</a></p>
+  </div>
+</footer>
 </body>
 </html>
