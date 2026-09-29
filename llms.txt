@@ -1,6 +1,6 @@
 # AI Actually
 
-> AI Actually is a personal AI in development that is being built to protect families from AI used against them: AI scam calls, cloned voices and deepfakes; AI tools and agents that act without permission; and chatbots talking to kids. It is not available yet. There is no app, no price, and no launch date. People can join the early access list on the homepage.
+> AI Actually is a personal AI in development that is being built to protect people, at any age and on their own devices, from AI used against them: AI scam calls, cloned voices and deepfakes; AI tools and agents that act without permission; and chatbots that manipulate or push too far. It is not available yet. There is no app, no price, and no launch date. People can join the early access list on the homepage.
 
 ## Status
 
@@ -8,9 +8,9 @@ In development, research stage. Nothing is for sale. Early access members will h
 
 ## What it is being built to do
 
-- **Scam calls, cloned voices, and deepfakes.** Spot a call or video that doesn't add up, such as a familiar voice pushing for money in a hurry, and walk the person through checking before they pay.
+- **Scam calls, cloned voices, and deepfakes.** Help a person check a call, text, or message that doesn't add up. They forward it or describe it, and get a plain answer and what to do next, before they pay.
 - **AI tools that act without asking.** Watch the AI apps and agents a person already uses, and check with them before one buys, sends, or shares something they didn't approve.
-- **Kids and chatbots.** Show parents which chatbots their kids are talking to, and flag conversations that go somewhere they shouldn't.
+- **Chatbots and AI companions.** Notice when an AI chat is pushing the person, flattering them into sharing more than they meant to, or steering them somewhere they didn't choose.
 
 ## The problem, with sources
 
