@@ -4,7 +4,7 @@
 
 ## What this is
 
-A small independent site. It gives practical steps a family can take tonight, grounded in FBI and FTC guidance, with sources linked. Nothing on the site is for sale.
+A small independent site. It gives practical steps a family can take tonight, grounded in FBI and FTC guidance, with sources linked. The tips and the guide are free. The only paid thing linked is the author's book on putting AI to work, sold on Amazon.
 
 ## Three topics
 
@@ -22,6 +22,10 @@ A small independent site. It gives practical steps a family can take tonight, gr
 ## Free guide
 
 A free Family AI Safety guide is coming. It is not published yet. People can join the email list on the homepage to get it when it is ready.
+
+## Privacy
+
+https://heyaiactually.com/privacy.html
 
 ## Contact
 
