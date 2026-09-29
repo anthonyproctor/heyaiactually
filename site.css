@@ -207,3 +207,58 @@ footer.site { border-top: 2px solid var(--ink); padding: 2.5rem 0 3rem; }
   .alert { margin: -5.5rem .5rem 0 .75rem; padding: 1rem 1rem 1.2rem; }
   .frame { width: min(11rem, 55vw); }
 }
+
+/* ---------- top nav (all pages) ---------- */
+.topnav { display: flex; align-items: center; gap: clamp(.75rem, 2.5vw, 1.75rem); }
+.navlink { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; font-weight: 500; font-size: 1.0625rem; text-decoration: none; border-bottom: 3px solid transparent; }
+.navlink:hover { border-bottom-color: var(--clay); }
+.navlink[aria-current="page"] { border-bottom-color: var(--clay-deep); }
+.logo picture { display: contents; }
+.logo { min-width: 44px; }
+/* Under 440px the full wordmark and two nav items don't fit, so the header shows the mark alone. */
+@media (max-width: 440px) { .logo img { height: 38px; } }
+
+/* ---------- labs ---------- */
+/* The window color is a custom property so a shadow copy of a home stays solid ink. */
+.win { fill: var(--win, var(--sun)); stroke: var(--ink); stroke-width: 3; stroke-linejoin: round; }
+.shadow { --win: var(--ink); }
+.labs-hero h1 { font-size: clamp(2.6rem, 1.4rem + 3.4vw, 4.25rem); }
+@media (min-width: 960px) { .labs-hero .hero-grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); } .labs-hero .lead { max-width: 38ch; } }
+.evidence { display: grid; gap: 2rem; max-width: 66rem; margin: 0 auto; }
+@media (min-width: 820px) { .evidence { grid-template-columns: 1fr 1fr; } }
+.ev { background: var(--paper); border: 2.5px solid var(--ink); border-radius: 18px; box-shadow: 6px 6px 0 var(--ink); padding: 1.5rem 1.5rem 1.6rem; border-top: 10px solid var(--clay); display: flex; flex-direction: column; }
+.ev:nth-child(2) { border-top-color: var(--sage); } .ev:nth-child(3) { border-top-color: var(--sun); } .ev:nth-child(4) { border-top-color: var(--clay-deep); }
+.ev h3 { font-size: clamp(1.45rem, 1.25rem + .8vw, 1.9rem); line-height: 1.12; }
+.ev p { margin-top: .75rem; }
+.ev q { font-weight: 500; }
+.ev .cite { margin-top: auto; padding-top: 1rem; font-size: 1rem; color: var(--muted); }
+.gap { max-width: 46rem; margin: clamp(2.5rem, 5vw, 3.5rem) auto 0; text-align: center; font-family: var(--display); font-size: clamp(1.5rem, 1.25rem + 1vw, 2.1rem); line-height: 1.2; text-wrap: balance; }
+
+.threads { list-style: none; margin: 0 auto; padding: 0; max-width: 58rem; display: grid; gap: 1.5rem; }
+.threads li { display: grid; grid-template-columns: auto 1fr; gap: 1.25rem 1.5rem; align-items: start; background: var(--paper); border: 2.5px solid var(--ink); border-radius: 18px; box-shadow: 6px 6px 0 var(--ink); padding: 1.5rem; }
+.threads .num { display: grid; place-items: center; width: 3.5rem; height: 4.1rem; border: 2.5px solid var(--ink); border-radius: 999px 999px 10px 10px; background: var(--sun); font-family: var(--display); font-size: 1.75rem; box-shadow: 3px 3px 0 var(--ink); }
+.threads li:nth-child(2) .num { background: var(--sage); } .threads li:nth-child(3) .num { background: var(--cream-2); } .threads li:nth-child(4) .num { background: var(--clay); }
+.threads h3 { font-size: clamp(1.45rem, 1.25rem + .8vw, 1.9rem); line-height: 1.12; }
+.threads p { margin-top: .6rem; max-width: 60ch; }
+@media (max-width: 520px) { .threads li { grid-template-columns: 1fr; } }
+
+.ladder { list-style: none; margin: 0 auto; padding: 0; max-width: 66rem; display: grid; gap: 2rem; counter-reset: none; }
+@media (min-width: 860px) { .ladder { grid-template-columns: repeat(3, 1fr); } }
+.ladder li { background: var(--paper); border: 2.5px solid var(--ink); border-radius: 18px; box-shadow: 6px 6px 0 var(--ink); padding: 1.25rem 1.5rem 1.6rem; }
+.ladder li:first-child { background: var(--sun-soft); }
+.ladder-art { display: block; width: 100%; max-width: 13rem; height: auto; margin: 0 auto .75rem; overflow: visible; }
+.ladder .when { display: inline-block; font-weight: 600; font-size: 1rem; color: var(--clay-deep); }
+.ladder h3 { font-size: clamp(1.45rem, 1.25rem + .8vw, 1.9rem); line-height: 1.12; margin-top: .2rem; }
+.ladder p { margin-top: .6rem; }
+
+.principles { list-style: none; margin: 0 auto; padding: 0; max-width: 66rem; display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); }
+.principles li { border-top: 3px solid var(--ink); padding-top: 1rem; }
+.principles h3 { font-size: clamp(1.4rem, 1.2rem + .7vw, 1.75rem); line-height: 1.15; }
+.principles p { margin-top: .5rem; }
+
+.talk-grid { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 900px) { .talk-grid { grid-template-columns: 1fr 1fr; } }
+.talk-grid h2 { font-size: clamp(2.2rem, 1.5rem + 2.8vw, 3.75rem); line-height: 1.05; }
+.talk-grid .sub { margin-top: 1.25rem; max-width: 42ch; }
+.talk-mail { margin-top: 1.25rem; }
+.talk-mail .btn { width: 100%; overflow-wrap: anywhere; }

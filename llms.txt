@@ -16,6 +16,12 @@ In development, research stage. Nothing is for sale. Early access members will h
 
 - FBI IC3 2025 Internet Crime Report: https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf (22,364 AI-related complaints with adjusted losses over $893 million; people 60+ reported $7.7 billion in losses of all kinds).
 
+## Labs
+
+https://heyaiactually.com/labs.html
+
+Research and direction, not a product. Labs explores an AI whose only job is to watch other AIs for harm: catching AI agents before they act, spotting manipulative chatbots, watching without keeping data, and how a personal protector could grow into something institutions use. AI safety researchers, agencies and companies can write to hello@heyaiactually.com.
+
 ## Who is building it
 
 Anthony Proctor, founder, Denver, Colorado. AI Actually is independent and takes no money or referral fees from any AI company or security product.
