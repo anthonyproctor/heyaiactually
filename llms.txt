@@ -1,6 +1,6 @@
 # AI Actually
 
-> AI Actually is a personal AI in development that is being built to protect people on their own devices from AI used against them: scams, fake messages and cloned voices; AI tools and agents that act without permission; and chatbots that manipulate or push too far. The plan is an always on helper that warns people in plain words before they act. The first version is planned as a browser extension and an email connection, with text alerts on Android after that. It is not available yet. There is no app, no price, and no launch date. Adults can join the early access list on the homepage.
+> AI Actually is a personal AI in development that is being built to protect people on their own devices from AI used against them: scams, fake messages and cloned voices; payments people didn't mean to make, including ones an AI assistant starts; and chatbots that manipulate or push too far. The plan is an always on helper that warns people in plain words before they act. The first version is planned as a browser extension and an email connection, with text alerts on Android after that. It is not available yet. There is no app, no price, and no launch date. Adults can join the early access list on the homepage.
 
 ## Status
 
@@ -9,7 +9,7 @@ In development, research stage. Nothing is for sale. Early access members will h
 ## What it is being built to do
 
 - **Scam emails, texts, and cloned voices.** Flag the warning signs in a person's inbox and browser, with the safe next step, before they click or pay. It will not listen to or record phone calls; if a call or voice message seemed off, the person can describe it and get a plain answer.
-- **AI tools that act without asking.** Warn a person when an AI app or agent they use tries to buy, send, or share something they didn't approve, and let them stop it.
+- **A pause before you pay.** Pause before a payment goes through so the person can confirm it's what they meant, whether they clicked or an AI assistant did.
 - **Chatbots and AI companions.** Notice when an AI chat is pushing the person, flattering them into sharing more than they meant to, or steering them somewhere they didn't choose.
 
 ## The problem, with sources
